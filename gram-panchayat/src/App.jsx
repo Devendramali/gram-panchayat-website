@@ -1,18 +1,18 @@
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Topnav from "./components/Topnav";
-import Home from "./components/Home";
-import GrampanchayatPrashsan from "./components/GrampanchayatPrashsan";
-import AboutUs from "./components/AboutUs";
-import MahitiAdhikar from "./components/MahitiAdhikar";
-import Awards from "./components/Awards";
-import Schemes from "./components/Schemes";
-import Notices from "./components/Notices";
-import SoiSuvidha from "./components/SoiSuvidha";
-import JamaKharchPatrak from "./components/JamaKharchPatrak";
-import Contact from "./components/Contact";
-import PanchayatRajMission from "./components/PanchayatRajMission";
-import History from "./components/History";
+import Navbar from "./pages/Navbar";
+import Topnav from "./pages/Topnav";
+import Home from "./pages/Home";
+import GrampanchayatPrashsan from "./pages/GrampanchayatPrashsan";
+import AboutUs from "./pages/AboutUs";
+import MahitiAdhikar from "./pages/MahitiAdhikar";
+import Awards from "./pages/Awards";
+import Schemes from "./pages/Schemes";
+import Notices from "./pages/Notices";
+import SoiSuvidha from "./pages/SoiSuvidha";
+import JamaKharchPatrak from "./pages/JamaKharchPatrak";
+import Contact from "./pages/Contact";
+import PanchayatRajMission from "./pages/PanchayatRajMission";
+import History from "./pages/History";
 
 
 const App = () => {
