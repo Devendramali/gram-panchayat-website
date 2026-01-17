@@ -1,0 +1,12 @@
+.bg-dot{
+    background-image: url(./../public/vector.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*{
+      font-family: "Poppins", sans-serif;
+
+}
+.transition{
+    transition: all .3s linear;
+}
