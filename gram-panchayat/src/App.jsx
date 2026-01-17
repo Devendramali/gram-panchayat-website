@@ -22,7 +22,7 @@ const App = () => {
         <Topnav />
         <Navbar />
         
-        <Routes>.
+        <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/GrampanchayatPrashsan" element={<GrampanchayatPrashsan/>} />
           <Route path="/about" element={<AboutUs/>} />

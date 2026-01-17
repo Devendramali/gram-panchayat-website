@@ -1,5 +1,3 @@
-import cleanlogo from "../assets/images/clean_logo.png";
-import logo from "../assets/images/Logo2.png";
 import { FaPhone } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import { MdLocationOn } from "react-icons/md";
@@ -10,8 +8,8 @@ const Topnav = () => {
     <>
       <div className="bg-gray-300 h-15 py-2 px-10 flex justify-between">
         <div className="flex items-center justify-center">
-          <img src={cleanlogo} className="size-15" alt="" />
-          <img src={logo} alt="" />
+          <img src='/clean_logo.png' className="size-15" alt="" />
+          <img src='/Logo2.png' alt="" />
           <span className="text-xl font-bold">
             Government of Maharashtra | महाराष्ट्र शासन
           </span>
