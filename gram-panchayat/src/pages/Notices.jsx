@@ -17,7 +17,7 @@ const Notices = () => {
     <>
       <div className=" bg-[#f6f7fa] py-[90px]">
         <div className="flex justify-center gap-3">
-          <img src="./public/announsc.png" className="h-13" alt="" />
+          <img src="./announsc.png" className="h-13" alt="" />
           <SectionHeader title="सूचना"/>
         </div>
         <div className="max-w-[1000px] mt-[60px] m-auto">
@@ -56,21 +56,21 @@ export default Notices
 export const Noticeslist = [
   {
     id:1,
-    imgSrc:"./public/announcedefault.jpg",
+    imgSrc:"./announcedefault.jpg",
     title:"मतदार यादी प्रसिद्ध करणे.",
     discription:"जिल्हा परिषद निवडणूक विभाग व पंचायत समिती गणाची प्रारूप मतदार यादी प्रसिद्ध करणे साठी मा. राज्य निवडणूक क आयोग याच्या कडील आदेश क्र./राणीआ/जि. प.प. स./2025/प्र. क्र.20/का7 दिनांक-23/09/2025",
     date:"13/10/2025"
   },
     {
     id:2,
-    imgSrc:"./public/announcedefault.jpg",
+    imgSrc:"./announcedefault.jpg",
     title:"दिनांक ०७/१०/२०२५ रोजी सर्व ऑनपद्तीने चे कागदपत्रेसाठी कम्प लावल्यात आला आहे",
     discription:"जिल्हा परिषद निवडणूक विभाग व पंचायत समिती गणाची प्रारूप मतदार यादी प्रसिद्ध करणे साठी मा. राज्य निवडणूक क आयोग याच्या कडील आदेश क्र./राणीआ/जि. प.प. स./2025/प्र. क्र.20/का7 दिनांक-23/09/2025",
     date:"13/10/2025"
   },
     {
     id:3,
-    imgSrc:"./public/announcedefault.jpg",
+    imgSrc:"./announcedefault.jpg",
     title:"मतदार यादी प्रसिद्ध करणे.",
     discription:"जिल्हा परिषद निवडणूक विभाग व पंचायत समिती गणाची प्रारूप मतदार यादी प्रसिद्ध करणे साठी मा. राज्य निवडणूक क आयोग याच्या कडील आदेश क्र./राणीआ/जि. प.प. स./2025/प्र. क्र.20/का7 दिनांक-23/09/2025",
     date:"13/10/2025"

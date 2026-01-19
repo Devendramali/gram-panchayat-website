@@ -28,7 +28,7 @@ const GrampanchayatPrashsan = () => {
           <SectionHeader title="शासकीय शाळा मराठी" classname="mb-[30px]" />
             <div className="flex gap-2 justify-center items-center">
               <figure className="mb-0 bg-[#FD7E14] w-9 h-9 flex rounded-[50px] justify-center items-center">
-              <img src="./public/icon1.svg" alt=""  className="h-6 w-6"/>
+              <img src="./icon1.svg" alt=""  className="h-6 w-6"/>
 
               </figure>
               <div>
@@ -59,7 +59,7 @@ const GrampanchayatPrashsan = () => {
         </div>
          <div className="col-span-5">
           <figure className="h-[100%] w-[100%]">
-            <img src="./public/school.png" alt=""  className="h-[100%] w-[100%]"/>
+            <img src="./school.png" alt=""  className="h-[100%] w-[100%]"/>
           </figure>
          </div>
          

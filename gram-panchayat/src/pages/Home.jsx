@@ -135,35 +135,35 @@ const Home = () => {
             <div className="px-6 flex gap-4 justify-center flex-wrap">
               <div className="p-3 mt-12 bg-[#fff] w-[250px] transition hover:scale-[1.1] h-[300px] rounded-[18px]">
                 <figure className="h-[200px]">
-                  <img src="./public/q.png" className="h-full object-cover" alt="" />
+                  <img src="./q.png" className="h-full object-cover" alt="" />
                 </figure>
                 <h2 className="text-[18px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
                 <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
               </div>
               <div className="p-3 mt-6 bg-[#fff] w-[250px] transition hover:scale-[1.1] h-[300px] rounded-[18px]">
                 <figure className="h-[200px]">
-                  <img src="./public/w.png" className="h-full object-cover" alt="" />
+                  <img src="./w.png" className="h-full object-cover" alt="" />
                 </figure>
                 <h2 className="text-[18px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
                 <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
               </div>
               <div className="p-3 bg-[#fff] w-[250px] transition hover:scale-[1.1] h-[300px] rounded-[18px]">
                 <figure className="h-[200px]">
-                  <img src="./public/e.png" className="h-full object-cover" alt="" />
+                  <img src="./e.png" className="h-full object-cover" alt="" />
                 </figure>
                 <h2 className="text-[18px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
                 <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
               </div>
               <div className="p-3 mt-6 bg-[#fff] w-[250px] transition hover:scale-[1.1] h-[300px] rounded-[18px]">
                 <figure className="h-[200px]">
-                  <img src="./public/r.jpg" className="h-full object-cover" alt="" />
+                  <img src="./r.jpg" className="h-full object-cover" alt="" />
                 </figure>
                 <h2 className="text-[18px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
                 <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
               </div>
               <div className="p-3 mt-12 bg-[#fff] w-[250px] transition hover:scale-[1.1] h-[300px] rounded-[18px]">
                 <figure className="h-[200px]">
-                  <img src="./public/t.png" className="h-full object-cover" alt="" />
+                  <img src="./t.png" className="h-full object-cover" alt="" />
                 </figure>
                 <h2 className="text-[18px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
                 <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
@@ -172,14 +172,14 @@ const Home = () => {
 
                 <div className="p-3  bg-[#fff] w-[200px] transition hover:scale-[1.1] h-[280px] rounded-[18px]">
                 <figure className="h-[170px]">
-                  <img src="./public/y.png" className="h-full object-cover" alt="" />
+                  <img src="./y.png" className="h-full object-cover" alt="" />
                 </figure>
                 <h2 className="text-[16px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
                 <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
               </div>
               <div className="p-3 bg-[#fff] w-[200px] transition hover:scale-[1.1] h-[280px] rounded-[18px]">
                 <figure className="h-[170px]">
-                  <img src="./public/u.jpg" className="h-full object-cover" alt="" />
+                  <img src="./u.jpg" className="h-full object-cover" alt="" />
                 </figure>
                 <h2 className="text-[16px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
                 <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
@@ -214,8 +214,8 @@ const Home = () => {
               <p className="text-[15px]">ही ग्रामपंचायत संबंधित पंचायत समिती अंतर्गत कार्यरत असून तिच्या अखत्यारीत ३ गावे समाविष्ट आहेत...नागरिक माहिती </p>
             </div>
             <div className="relative min-w-[500px]">
-              <img src="./public/about1.png" className="w-[350px] bg-[#fff] p-1 rounded-[24px] shadow-[1px_1px_12px_#bfbfbf]" alt="" />
-              <img src="./public/about2.png" className="w-[350px] absolute top-[80px] bg-[#fff] p-1 rounded-[24px] shadow-[1px_1px_12px_#bfbfbf] right-0" alt="" />
+              <img src="./about1.png" className="w-[350px] bg-[#fff] p-1 rounded-[24px] shadow-[1px_1px_12px_#bfbfbf]" alt="" />
+              <img src="./about2.png" className="w-[350px] absolute top-[80px] bg-[#fff] p-1 rounded-[24px] shadow-[1px_1px_12px_#bfbfbf] right-0" alt="" />
             </div>
           </div>
              
@@ -301,21 +301,21 @@ export const officers = [
 export const Noticeslist = [
   {
     id:1,
-    imgSrc:"./public/announcedefault.jpg",
+    imgSrc:"./announcedefault.jpg",
     title:"मतदार यादी प्रसिद्ध करणे.",
     discription:"जिल्हा परिषद निवडणूक विभाग व पंचायत समिती गणाची प्रारूप मतदार यादी प्रसिद्ध करणे साठी मा. राज्य निवडणूक क आयोग याच्या कडील आदेश क्र./राणीआ/जि. प.प. स./2025/प्र. क्र.20/का7 दिनांक-23/09/2025",
     date:"13/10/2025"
   },
     {
     id:2,
-    imgSrc:"./public/announcedefault.jpg",
+    imgSrc:"./announcedefault.jpg",
     title:"दिनांक ०७/१०/२०२५ रोजी सर्व ऑनपद्तीने चे कागदपत्रेसाठी कम्प लावल्यात आला आहे",
     discription:"जिल्हा परिषद निवडणूक विभाग व पंचायत समिती गणाची प्रारूप मतदार यादी प्रसिद्ध करणे साठी मा. राज्य निवडणूक क आयोग याच्या कडील आदेश क्र./राणीआ/जि. प.प. स./2025/प्र. क्र.20/का7 दिनांक-23/09/2025",
     date:"13/10/2025"
   },
     {
     id:3,
-    imgSrc:"./public/announcedefault.jpg",
+    imgSrc:"./announcedefault.jpg",
     title:"मतदार यादी प्रसिद्ध करणे.",
     discription:"जिल्हा परिषद निवडणूक विभाग व पंचायत समिती गणाची प्रारूप मतदार यादी प्रसिद्ध करणे साठी मा. राज्य निवडणूक क आयोग याच्या कडील आदेश क्र./राणीआ/जि. प.प. स./2025/प्र. क्र.20/का7 दिनांक-23/09/2025",
     date:"13/10/2025"

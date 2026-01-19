@@ -140,32 +140,32 @@ export const galleryItems = [
   {
     id: 1,
     type: "photo",
-    src: "./public/school.png",
+    src: "./school.png",
     title:"फॉर्मर producer कंपनी कमिटी स्थापना"
   },
   {
     id: 2,
     type: "photo",
-    src: "./public/school.png",
+    src: "./school.png",
     title:"फॉर्मर producer कंपनी कमिटी स्थापना"
   },
   {
     id: 3,
     type: "photo",
-    src: "./public/school.png",
+    src: "./school.png",
     title:"फॉर्मर producer कंपनी कमिटी स्थापना"
   },
   {
     id: 4,
     type: "video",
-    thumbnail: "./public/school.png",
+    thumbnail: "./school.png",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     title:"फॉर्मर producer कंपनी कमिटी स्थापना"
   },
   {
     id: 5,
     type: "video",
-    thumbnail: "./public/school.png",
+    thumbnail: "./school.png",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       title:"फॉर्मर producer कंपनी कमिटी स्थापना"
   },

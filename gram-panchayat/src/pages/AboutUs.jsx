@@ -15,19 +15,19 @@ const AboutUs = () => {
           <div className="flex gap-4">
             <div>
               <figure>
-                <img src="./public/img1.png" className="h-60" alt="" />
+                <img src="./img1.png" className="h-60" alt="" />
               </figure>
             </div>
             <div className="mt-[100px]">
               <figure>
-                <img src="./public/img2.png" className="h-90" alt="" />
+                <img src="./img2.png" className="h-90" alt="" />
               </figure>
             </div>
           </div>
         </div>
         <div className="max-w-[1100px] gap-4 items-center mt-[60px] m-auto flex">
           <figure className="mb-0 w-[357px] h-[263px] ">
-            <img src="./public/map.png" alt="" />
+            <img src="./map.png" alt="" />
           </figure>
           <div className="p-12 h-fit bg-[#fff2e7] w-[700px] flex-wrap  gap-[30px] flex rounded-2xl">
             <h3 className="text-[14px] font-[700] block min-w-[280px]">स्थापन वर्ष: <span className="font-[400]"> 1974</span></h3>
@@ -45,7 +45,7 @@ const AboutUs = () => {
             <div className="flex justify-start flex-col items-start mb-5">
               <div className="flex gap-2 justify-center items-center mb-1">
                 <figure className="mb-0 bg-[#FD7E14] w-9 h-9 flex rounded-[50px] justify-center items-center">
-                  <img src="./public/icon1.svg" alt="" className="h-6 w-6" />
+                  <img src="./icon1.svg" alt="" className="h-6 w-6" />
 
                 </figure>
                 <h3 className="text-[20px] font-[700]">स्थान माहिती:</h3>
@@ -55,7 +55,7 @@ const AboutUs = () => {
             <div className="flex justify-start flex-col items-start">
               <div className="flex gap-2 justify-center items-center mb-1">
                 <figure className="mb-0 bg-[#FD7E14] w-9 h-9 flex rounded-[50px] justify-center items-center">
-                  <img src="./public/icon1.svg" alt="" className="h-6 w-6" />
+                  <img src="./icon1.svg" alt="" className="h-6 w-6" />
 
                 </figure>
                 <h3 className="text-[20px] font-[700]">दळणवळण माहिती:</h3>
@@ -81,7 +81,7 @@ const AboutUs = () => {
           </div>
           <div className="col-span-5">
             <figure className="h-[100%] w-[100%]">
-              <img src="./public/school.png" alt="" className="h-[100%] w-[100%]" />
+              <img src="./school.png" alt="" className="h-[100%] w-[100%]" />
             </figure>
           </div>
 
