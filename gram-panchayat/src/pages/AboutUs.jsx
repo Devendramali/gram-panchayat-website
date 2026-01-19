@@ -15,19 +15,19 @@ const AboutUs = () => {
           <div className="flex gap-4">
             <div>
               <figure>
-                <img src="./img1.png" className="h-60" alt="" />
+                <img src="./img1.webp" className="h-60" alt="" />
               </figure>
             </div>
             <div className="mt-[100px]">
               <figure>
-                <img src="./img2.png" className="h-90" alt="" />
+                <img src="./img2.webp" className="h-90" alt="" />
               </figure>
             </div>
           </div>
         </div>
         <div className="max-w-[1100px] gap-4 items-center mt-[60px] m-auto flex">
           <figure className="mb-0 w-[357px] h-[263px] ">
-            <img src="./map.png" alt="" />
+            <img src="./map.webp" alt="" />
           </figure>
           <div className="p-12 h-fit bg-[#fff2e7] w-[700px] flex-wrap  gap-[30px] flex rounded-2xl">
             <h3 className="text-[14px] font-[700] block min-w-[280px]">स्थापन वर्ष: <span className="font-[400]"> 1974</span></h3>
@@ -81,7 +81,7 @@ const AboutUs = () => {
           </div>
           <div className="col-span-5">
             <figure className="h-[100%] w-[100%]">
-              <img src="./school.png" alt="" className="h-[100%] w-[100%]" />
+              <img src="./school.webp" alt="" className="h-[100%] w-[100%]" />
             </figure>
           </div>
 

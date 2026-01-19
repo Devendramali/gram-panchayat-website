@@ -135,21 +135,21 @@ const Home = () => {
             <div className="px-6 flex gap-4 justify-center flex-wrap">
               <div className="p-3 mt-12 bg-[#fff] w-[250px] transition hover:scale-[1.1] h-[300px] rounded-[18px]">
                 <figure className="h-[200px]">
-                  <img src="./q.png" className="h-full object-cover" alt="" />
+                  <img src="./q.webp" className="h-full object-cover" alt="" />
                 </figure>
                 <h2 className="text-[18px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
                 <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
               </div>
               <div className="p-3 mt-6 bg-[#fff] w-[250px] transition hover:scale-[1.1] h-[300px] rounded-[18px]">
                 <figure className="h-[200px]">
-                  <img src="./w.png" className="h-full object-cover" alt="" />
+                  <img src="./w.webp" className="h-full object-cover" alt="" />
                 </figure>
                 <h2 className="text-[18px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
                 <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
               </div>
               <div className="p-3 bg-[#fff] w-[250px] transition hover:scale-[1.1] h-[300px] rounded-[18px]">
                 <figure className="h-[200px]">
-                  <img src="./e.png" className="h-full object-cover" alt="" />
+                  <img src="./e.webp" className="h-full object-cover" alt="" />
                 </figure>
                 <h2 className="text-[18px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
                 <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
@@ -163,7 +163,7 @@ const Home = () => {
               </div>
               <div className="p-3 mt-12 bg-[#fff] w-[250px] transition hover:scale-[1.1] h-[300px] rounded-[18px]">
                 <figure className="h-[200px]">
-                  <img src="./t.png" className="h-full object-cover" alt="" />
+                  <img src="./t.webp" className="h-full object-cover" alt="" />
                 </figure>
                 <h2 className="text-[18px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
                 <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
@@ -172,7 +172,7 @@ const Home = () => {
 
                 <div className="p-3  bg-[#fff] w-[200px] transition hover:scale-[1.1] h-[280px] rounded-[18px]">
                 <figure className="h-[170px]">
-                  <img src="./y.png" className="h-full object-cover" alt="" />
+                  <img src="./y.webp" className="h-full object-cover" alt="" />
                 </figure>
                 <h2 className="text-[16px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
                 <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
@@ -214,8 +214,8 @@ const Home = () => {
               <p className="text-[15px]">ही ग्रामपंचायत संबंधित पंचायत समिती अंतर्गत कार्यरत असून तिच्या अखत्यारीत ३ गावे समाविष्ट आहेत...नागरिक माहिती </p>
             </div>
             <div className="relative min-w-[500px]">
-              <img src="./about1.png" className="w-[350px] bg-[#fff] p-1 rounded-[24px] shadow-[1px_1px_12px_#bfbfbf]" alt="" />
-              <img src="./about2.png" className="w-[350px] absolute top-[80px] bg-[#fff] p-1 rounded-[24px] shadow-[1px_1px_12px_#bfbfbf] right-0" alt="" />
+              <img src="./about1.webp" className="w-[350px] bg-[#fff] p-1 rounded-[24px] shadow-[1px_1px_12px_#bfbfbf]" alt="" />
+              <img src="./about2.webp" className="w-[350px] absolute top-[80px] bg-[#fff] p-1 rounded-[24px] shadow-[1px_1px_12px_#bfbfbf] right-0" alt="" />
             </div>
           </div>
              

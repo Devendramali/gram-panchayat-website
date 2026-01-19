@@ -59,7 +59,7 @@ const GrampanchayatPrashsan = () => {
         </div>
          <div className="col-span-5">
           <figure className="h-[100%] w-[100%]">
-            <img src="./school.png" alt=""  className="h-[100%] w-[100%]"/>
+            <img src="./school.webp" alt=""  className="h-[100%] w-[100%]"/>
           </figure>
          </div>
          

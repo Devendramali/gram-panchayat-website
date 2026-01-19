@@ -8,7 +8,7 @@ const Topnav = () => {
     <>
       <div className="bg-gray-300 h-15 py-2 px-10 flex justify-between">
         <div className="flex items-center justify-center">
-          <img src='/clean_logo.png' className="size-15" alt="" />
+          <img src='/clean_logo.webp' className="size-15" alt="" />
           <img src='/Logo2.png' alt="" />
           <span className="text-xl font-bold">
             Government of Maharashtra | महाराष्ट्र शासन
