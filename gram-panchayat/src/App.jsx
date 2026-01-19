@@ -13,6 +13,11 @@ import JamaKharchPatrak from "./pages/JamaKharchPatrak";
 import Contact from "./pages/Contact";
 import PanchayatRajMission from "./pages/PanchayatRajMission";
 import History from "./pages/History";
+import Footer from "./pages/Footer";
+import Gallery from "./pages/dropdown/Gallery";
+import GovDecision from "./pages/dropdown/GovDecision";
+import GovSchemes from "./pages/dropdown/GovSchemes";
+import VillageProgram from "./pages/dropdown/VillageProgram";
 
 
 const App = () => {
@@ -35,7 +40,12 @@ const App = () => {
           <Route path="/history" element={<History/>} />
           <Route path="/panchayatRajMission" element={<PanchayatRajMission/>} />
           <Route path="/contact" element={<Contact/>} />
+          <Route path="/gallery" element={<Gallery/>} />
+          <Route path="/government-schemes" element={<GovSchemes/>} />
+          <Route path="/village-programs" element={<VillageProgram/>} />
+          <Route path="/govt-decisions" element={<GovDecision/>} />
         </Routes>
+        <Footer/>
       </div>
     </>
   );

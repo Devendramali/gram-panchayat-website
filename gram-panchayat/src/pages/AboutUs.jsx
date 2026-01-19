@@ -1,6 +1,7 @@
 import MainHeading from "../component/MainHeading"
 import SectionHeader from "../component/SectionHeader"
 import BigCards from "../component/cards/BigCards";
+import MediumCard from "../component/cards/MediumCard";
 import Smallcards from "../component/cards/Smallcards";
 
 const AboutUs = () => {
@@ -87,8 +88,18 @@ const AboutUs = () => {
         </div>
 
       </div>
+      <div className="py-[60px] bg-[#f8f9fa]">
+         <SectionHeader title="आमचे प्रशासकीय अधिकारी" classname="mb-[60px] underline1" />
+         <div className="m-auto flex justify-center gap-5">
+          {
+              officers.map((item)=>(
+                <MediumCard data={item}/>
+              ))
+          }
+         </div>
+      </div>
       <div className="grampanchayatmain bg-white bg-dot py-[90px]">
-        <SectionHeader title="ग्रामपंचायत प्रशासन" classname="mb-[60px]" />
+        <SectionHeader title="ग्रामपंचायतीचे माननीय सदस्य" classname="mb-[60px] " />
         <div className="m-auto max-w-[1000px] flex-wrap flex gap-[40px] justify-center">
           {Administration.map((item) => (
             <BigCards key={item.id} data={item} />
@@ -182,6 +193,19 @@ const AboutUs = () => {
 }
 
 export default AboutUs
+
+export const officers = [
+  {
+    id: 1,
+    imgsrc: "./user-circle.svg",
+    title: "श्रीमती बाजुबाई भूपेंद्र वसावे",
+    position: "सरपंच, ग्रामपंचायत",
+    contact: {
+      number: 132648566
+    }
+  }
+]
+
 
 export const Administration = [
   {
