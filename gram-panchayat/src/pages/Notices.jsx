@@ -15,7 +15,7 @@ const Notices = () => {
 
   return (
     <>
-      <div className=" bg-[#f6f7fa] py-[90px]">
+      <div className=" bg-[#f6f7fa] px-5 py-[90px]">
         <div className="flex justify-center gap-3">
           <img src="./announsc.png" className="h-13" alt="" />
           <SectionHeader title="सूचना"/>
@@ -24,7 +24,7 @@ const Notices = () => {
           <div className="search flex justify-center items-center gap-4">
             <input type="search" className="bg-[#fff] py-2 px-4 border border-[1px] border-[#ff7400]  focus:outline-none 
              focus:ring-0  rounded-[8px]
-             focus:border-[#ff7400]  min-w-[700px]" name="" placeholder="येथे सूचना शोधा...." id=""  value={searchText} onChange={(e)=> setsearchText(e.target.value)}/>
+             focus:border-[#ff7400] w-[100%] lg:w-[700px]" name="" placeholder="येथे सूचना शोधा...." id=""  value={searchText} onChange={(e)=> setsearchText(e.target.value)}/>
             <button className="bg-[#ffc9a0] h-10 w-11 flex justify-center items-center rounded-[8px]"><Search color="#595450"/></button>
           </div>
           <p className="text-center mt-2 text-[#595450] text-[14px]">गावातील रहिवाशांसाठी नवीनतम अपडेट्स आणि महत्वाची माहिती.</p>

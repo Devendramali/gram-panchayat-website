@@ -1,6 +1,7 @@
-import MainHeading from "../component/MainHeading"
-import SectionHeader from "../component/SectionHeader"
+import MainHeading from "../component/MainHeading";
+import SectionHeader from "../component/SectionHeader";
 import BigCards from "../component/cards/BigCards";
+import Box from "../component/cards/Box";
 import MediumCard from "../component/cards/MediumCard";
 import Smallcards from "../component/cards/Smallcards";
 
@@ -8,191 +9,259 @@ const AboutUs = () => {
   return (
     <>
       <div className="px-6 page py-[90px] bg-white">
-        <div className="max-w-[1100px] m-auto gap-8 flex ">
+        <div className="max-w-[1100px] flex flex-col justify-center lg:flex-row m-auto gap-8 flex ">
           <div className="text-left">
-            <MainHeading title="आमच्या बाबत" subheading="भारतातील बहुतेक खेडी ही त्यांच्या ग्रामपंचायतीच्या अखत्यारीत येतात..." subhadingclass="text-left" classname="text-left mb-1" />
+            <MainHeading
+              title="आमच्या बाबत"
+              subheading="भारतातील बहुतेक खेडी ही त्यांच्या ग्रामपंचायतीच्या अखत्यारीत येतात..."
+              subhadingclass="text-left"
+              classname="text-left mb-1"
+            />
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-2 lg:gap-4">
             <div>
               <figure>
-                <img src="./img1.webp" className="h-60" alt="" />
+                <img src="./img1.webp" className="lg:h-60" alt="" />
               </figure>
             </div>
             <div className="mt-[100px]">
               <figure>
-                <img src="./img2.webp" className="h-90" alt="" />
+                <img src="./img2.webp" className="lg:h-80" alt="" />
               </figure>
             </div>
           </div>
         </div>
-        <div className="max-w-[1100px] gap-4 items-center mt-[60px] m-auto flex">
-          <figure className="mb-0 w-[357px] h-[263px] ">
-            <img src="./map.webp" alt="" />
+       
+        <div className="max-w-[1100px] mx-auto mt-16 flex flex-col lg:flex-row gap-6 items-center">
+          {/* MAP IMAGE */}
+          <figure className="w-full sm:w-[357px] sm:h-[220px] sm:h-[263px] flex-shrink-0">
+            <img
+              src="./map.webp"
+              alt=""
+              className="w-full h-full object-cover rounded-xl"
+            />
           </figure>
-          <div className="p-12 h-fit bg-[#fff2e7] w-[700px] flex-wrap  gap-[30px] flex rounded-2xl">
-            <h3 className="text-[14px] font-[700] block min-w-[280px]">स्थापन वर्ष: <span className="font-[400]"> 1974</span></h3>
-            <h3 className="text-[14px] font-[700] block min-w-[280px]">गाव: <span className="font-[400]"> वावडी</span></h3>
-            <h3 className="text-[14px] font-[700] block min-w-[280px]">तालुक: <span className="font-[400]"> नवापूर</span></h3>
-            <h3 className="text-[14px] font-[700] block min-w-[280px]">जिल्हा: <span className="font-[400]"> नंदुरबार, महाराष्ट्र</span></h3>
-            <h3 className="text-[14px] font-[700] block min-w-[280px]">एकूण लोकसंख्या: <span className="font-[400]"> -------</span></h3>
-            <h3 className="text-[14px] font-[700] block min-w-[280px]">क्षेत्रफळ:  <span className="font-[400]"> -------</span></h3>
 
+          {/* INFO BOX */}
+          <div className="bg-[#fff2e7] w-full lg:w-[700px] p-6 sm:p-10 flex md:flex-row flex-col flex-wrap gap-4 sm:gap-8 rounded-2xl">
+            <h3 className="text-sm font-bold min-w-[45%]">
+              स्थापन वर्ष: <span className="font-normal">1974</span>
+            </h3>
+
+            <h3 className="text-sm font-bold min-w-[45%]">
+              गाव: <span className="font-normal">वावडी</span>
+            </h3>
+
+            <h3 className="text-sm font-bold min-w-[45%]">
+              तालुक: <span className="font-normal">नवापूर</span>
+            </h3>
+
+            <h3 className="text-sm font-bold min-w-[45%]">
+              जिल्हा: <span className="font-normal">नंदुरबार, महाराष्ट्र</span>
+            </h3>
+
+            <h3 className="text-sm font-bold min-w-[45%]">
+              एकूण लोकसंख्या: <span className="font-normal">-------</span>
+            </h3>
+
+            <h3 className="text-sm font-bold min-w-[45%]">
+              क्षेत्रफळ: <span className="font-normal">-------</span>
+            </h3>
           </div>
         </div>
-        <div className="max-w-[1000px] py-[90px] px-6 m-auto grid gap-5 grid-cols-12">
-          <div className="col-span-7">
+
+        <div className="max-w-[1000px] py-[90px]  m-auto sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <div className="md:col-span-7 col-span-12">
             <SectionHeader title="स्थान आणि दळणवळण" classname="mb-[30px]" />
             <div className="flex justify-start flex-col items-start mb-5">
               <div className="flex gap-2 justify-center items-center mb-1">
                 <figure className="mb-0 bg-[#FD7E14] w-9 h-9 flex rounded-[50px] justify-center items-center">
                   <img src="./icon1.svg" alt="" className="h-6 w-6" />
-
                 </figure>
                 <h3 className="text-[20px] font-[700]">स्थान माहिती:</h3>
               </div>
-              <p className="font-[500] text-[12px]">भारतातील बहुतेक खेडी ही ग्रामीण भागात वसलेली असतात आणि त्यांचा मुख्य व्यवसाय शेती असतो. (येथे तुमची मोठी डमी टेक्स्ट असू शकते...)</p>
+              <p className="font-[500] text-[12px]">
+                भारतातील बहुतेक खेडी ही ग्रामीण भागात वसलेली असतात आणि त्यांचा
+                मुख्य व्यवसाय शेती असतो. (येथे तुमची मोठी डमी टेक्स्ट असू
+                शकते...)
+              </p>
             </div>
             <div className="flex justify-start flex-col items-start">
               <div className="flex gap-2 justify-center items-center mb-1">
                 <figure className="mb-0 bg-[#FD7E14] w-9 h-9 flex rounded-[50px] justify-center items-center">
                   <img src="./icon1.svg" alt="" className="h-6 w-6" />
-
                 </figure>
                 <h3 className="text-[20px] font-[700]">दळणवळण माहिती:</h3>
               </div>
-
             </div>
             <div className="mt-2">
               <div className="flex justify-between bg-[#f9f9f9] p-3 mb-1 px-4 rounded-[12px] transition hover:-translate-y-0.5 hover:bg-[#eef7ff]">
-                <p className="text-[14px] font-[600] text-[#555]">जवळचे रेल्वे स्टेशन:</p>
+                <p className="text-[14px] font-[600] text-[#555]">
+                  जवळचे रेल्वे स्टेशन:
+                </p>
                 <p className="text-[14px] font-[600] text-[#555]">-------</p>
               </div>
               <div className="flex justify-between bg-[#f9f9f9] p-3 mb-1 px-4 rounded-[12px] transition hover:-translate-y-0.5 hover:bg-[#eef7ff]">
-                <p className="text-[14px] font-[600] text-[#555]">जवळचे विमानतळ:</p>
+                <p className="text-[14px] font-[600] text-[#555]">
+                  जवळचे विमानतळ:
+                </p>
                 <p className="text-[14px] font-[600] text-[#555]">-------</p>
               </div>
               <div className="flex justify-between bg-[#f9f9f9] p-3 mb-1 px-4 rounded-[12px] transition hover:-translate-y-0.5 hover:bg-[#eef7ff]">
                 <p className="text-[14px] font-[600] text-[#555]">जवळचे शहर:</p>
                 <p className="text-[14px] font-[600] text-[#555]">-------</p>
               </div>
-
             </div>
-
           </div>
-          <div className="col-span-5">
+          <div className="md:col-span-5 col-span-12">
             <figure className="h-[100%] w-[100%]">
               <img src="./school.webp" alt="" className="h-[100%] w-[100%]" />
             </figure>
           </div>
-
         </div>
-
       </div>
       <div className="py-[60px] bg-[#f8f9fa]">
-         <SectionHeader title="आमचे प्रशासकीय अधिकारी" classname="mb-[60px] underline1" />
-         <div className="m-auto flex justify-center gap-5">
-          {
-              officers.map((item)=>(
-                <MediumCard data={item}/>
-              ))
-          }
-         </div>
+        <SectionHeader
+          title="आमचे प्रशासकीय अधिकारी"
+          classname="mb-[60px] underline1"
+        />
+        <div className="m-auto flex justify-center gap-5">
+          {officers.map((item) => (
+            <MediumCard data={item} />
+          ))}
+        </div>
       </div>
-      <div className="grampanchayatmain bg-white bg-dot py-[90px]">
-        <SectionHeader title="ग्रामपंचायतीचे माननीय सदस्य" classname="mb-[60px] " />
+      <div className="grampanchayatmain bg-white px-6 bg-dot py-[90px]">
+        <SectionHeader
+          title="ग्रामपंचायतीचे माननीय सदस्य"
+          classname="mb-[60px] "
+        />
         <div className="m-auto max-w-[1000px] flex-wrap flex gap-[40px] justify-center">
           {Administration.map((item) => (
             <BigCards key={item.id} data={item} />
           ))}
-
         </div>
         <div className="mt-12 flex justify-center gap-5 flex-wrap">
-          {
-            members.map((item) => (
-              <Smallcards data={item} />
-            ))
-          }
+          {members.map((item) => (
+            <Smallcards data={item} />
+          ))}
         </div>
-
-
-
-      </div> <div className="py-[60px] bg-[#f0f3f5]">
-        <div class="overflow-x-auto max-w-[1092px] bg-white  p-4 m-auto  rounded-lg mt-[60px]">
+      </div>{" "}
+      <div className="py-[60px] bg-[#f0f3f5]">
+        <div class="overflow-x-auto max-w-[1092px] bg-white  py-4 m-auto  rounded-lg mt-[60px]">
           <table class="w-full border border-gray-200 border-collapse shadow-lg p-6">
             <thead>
               <tr class="bg-[#ff8c1a] text-white text-left">
-                <th class="p-4 border border-gray-200 w-[180px]">पदाचे नाव</th>
+                <th class="p-4 border border-gray-200 md:w-[180px]">पदाचे नाव</th>
                 <th class="p-4 border border-gray-200">जबाबदारी</th>
-                <th class="p-4 border border-gray-200">भूमिका</th>
+                <th class="p-4 border border-gray-200 md:block hidden">भूमिका</th>
               </tr>
             </thead>
 
             <tbody class="text-[15px] leading-relaxed text-gray-800">
-
               <tr>
                 <td class="p-4 text-[14px] border border-gray-200 bg-[#fff7ec] font-semibold text-center">
                   सरपंच
                 </td>
                 <td class="p-4 border border-gray-200 text-[12px]">
-
-                  ग्रामपंचायतीच्या सर्व बैठकींचे अध्यक्षस्थान भूषविणे. पंचायतचे ठराव मंजूर करून घेणे आणि त्यांची अंमलबजावणी सुनिश्चित करणे. ग्रामपंचायतीच्या निधीचा योग्य व पारदर्शक वापर करणे. शासनाच्या विविध योजनांची माहिती ग्रामस्थांपर्यंत पोहोचवणे. ग्रामस्वच्छता, आरोग्य, शिक्षण, पाणीपुरवठा, आणि इतर मूलभूत सोयींबाबत निर्णय घेणे. ग्रामसभांमध्ये नागरिकांच्या अडचणी ऐकून त्यावर उपाययोजना करणे. उपसरपंच आणि ग्रामसेवक यांच्याशी समन्वय ठेवून कामकाज चालवणे.
+                  ग्रामपंचायतीच्या सर्व बैठकींचे अध्यक्षस्थान भूषविणे. पंचायतचे
+                  ठराव मंजूर करून घेणे आणि त्यांची अंमलबजावणी सुनिश्चित करणे.
+                  ग्रामपंचायतीच्या निधीचा योग्य व पारदर्शक वापर करणे. शासनाच्या
+                  विविध योजनांची माहिती ग्रामस्थांपर्यंत पोहोचवणे.
+                  ग्रामस्वच्छता, आरोग्य, शिक्षण, पाणीपुरवठा, आणि इतर मूलभूत
+                  सोयींबाबत निर्णय घेणे. ग्रामसभांमध्ये नागरिकांच्या अडचणी ऐकून
+                  त्यावर उपाययोजना करणे. उपसरपंच आणि ग्रामसेवक यांच्याशी समन्वय
+                  ठेवून कामकाज चालवणे.
                 </td>
-                <td class="p-4 border border-gray-200 text-[12px]">
-                  ग्रामपंचायतीचा प्रमुख म्हणून सरपंच हा गावाच्या विकासाचा नेता असतो. ग्रामपंचायतीच्या सर्व कामकाजाचे नेतृत्व करणे, ग्रामस्थांमध्ये एकता राखणे आणि शासनाच्या योजना प्रभावीपणे राबवणे ही सरपंचाची मुख्य भूमिका असते.
+                <td class="p-4 border border-gray-200 text-[12px] md:block hidden">
+                  ग्रामपंचायतीचा प्रमुख म्हणून सरपंच हा गावाच्या विकासाचा नेता
+                  असतो. ग्रामपंचायतीच्या सर्व कामकाजाचे नेतृत्व करणे,
+                  ग्रामस्थांमध्ये एकता राखणे आणि शासनाच्या योजना प्रभावीपणे
+                  राबवणे ही सरपंचाची मुख्य भूमिका असते.
                 </td>
               </tr>
-
 
               <tr>
                 <td class="p-4 border text-[14px] border-gray-200 bg-[#fff7ec] font-semibold text-center">
                   उपसरपंच
                 </td>
                 <td class="p-4 border border-gray-200 text-[12px]">
-
-                  सरपंच अनुपस्थित असल्यास बैठका अध्यक्ष म्हणून घेणे. ग्रामपंचायतीच्या ठरावांची व योजनांची अंमलबजावणी करण्यात सहकार्य करणे. विविध समित्यांवर सदस्य म्हणून कार्य करणे व ग्रामस्थांच्या समस्यांकडे लक्ष देणे. सरपंचास विकासकामांसाठी सूचना व सहाय्य करणे. ग्रामपंचायतीतील अधिकारी व सदस्यांमधील समन्वय राखणे. पंचायत निधी व नोंदींच्या देखरेखीत मदत करणे.
+                  सरपंच अनुपस्थित असल्यास बैठका अध्यक्ष म्हणून घेणे.
+                  ग्रामपंचायतीच्या ठरावांची व योजनांची अंमलबजावणी करण्यात
+                  सहकार्य करणे. विविध समित्यांवर सदस्य म्हणून कार्य करणे व
+                  ग्रामस्थांच्या समस्यांकडे लक्ष देणे. सरपंचास विकासकामांसाठी
+                  सूचना व सहाय्य करणे. ग्रामपंचायतीतील अधिकारी व सदस्यांमधील
+                  समन्वय राखणे. पंचायत निधी व नोंदींच्या देखरेखीत मदत करणे.
                 </td>
-                <td class="p-4 border border-gray-200 text-[12px]">
-                  उपसरपंच हा सरपंचाचा सहाय्यक असतो आणि सरपंच अनुपस्थित असताना त्याची जबाबदारी पार पाडतो. ग्रामपंचायतीच्या सर्व कामकाजात सहकार्य आणि देखरेख करणे ही त्याची प्रमुख भूमिका आहे.
+                <td class="p-4 border border-gray-200 text-[12px] md:block hidden">
+                  उपसरपंच हा सरपंचाचा सहाय्यक असतो आणि सरपंच अनुपस्थित असताना
+                  त्याची जबाबदारी पार पाडतो. ग्रामपंचायतीच्या सर्व कामकाजात
+                  सहकार्य आणि देखरेख करणे ही त्याची प्रमुख भूमिका आहे.
                 </td>
               </tr>
-
 
               <tr>
                 <td class="p-4 text-[14px] border border-gray-200 bg-[#fff7ec] font-semibold text-center">
                   ग्रामपंचायत अधिकारी
                 </td>
                 <td class="p-4 border border-gray-200 text-[12px]">
-
-                  ग्रामपंचायतीची सर्व प्रशासकीय कामे नियमित ठेवणे. उत्पन्न आणि खर्चाची नोंद ठेवणे व वार्षिक अहवाल तयार करणे. ग्रामपंचायतीच्या बैठकींचे अजेंडे तयार करणे व बैठकींची नोंद ठेवणे. कर व महसूल वसूल करणे. विविध शासकीय योजना जसे मनरेगा, जलजीवन मिशन, स्वच्छ भारत मिशन इत्यादींची अंमलबजावणी करणे. ग्रामस्थांना आवश्यक कागदपत्रे (जन्म, मृत्यू दाखले इ.) पुरवणे. सरपंच व उपसरपंच यांच्या मार्गदर्शनाखाली ग्रामविकासाची कामे करणे. शासनाशी पत्रव्यवहार आणि अहवाल सादर करणे.
+                  ग्रामपंचायतीची सर्व प्रशासकीय कामे नियमित ठेवणे. उत्पन्न आणि
+                  खर्चाची नोंद ठेवणे व वार्षिक अहवाल तयार करणे. ग्रामपंचायतीच्या
+                  बैठकींचे अजेंडे तयार करणे व बैठकींची नोंद ठेवणे. कर व महसूल
+                  वसूल करणे. विविध शासकीय योजना जसे मनरेगा, जलजीवन मिशन, स्वच्छ
+                  भारत मिशन इत्यादींची अंमलबजावणी करणे. ग्रामस्थांना आवश्यक
+                  कागदपत्रे (जन्म, मृत्यू दाखले इ.) पुरवणे. सरपंच व उपसरपंच
+                  यांच्या मार्गदर्शनाखाली ग्रामविकासाची कामे करणे. शासनाशी
+                  पत्रव्यवहार आणि अहवाल सादर करणे.
                 </td>
-                <td class="p-4 border border-gray-200 text-[12px]">
-                  ग्रामसेवक हा ग्रामपंचायतीचा शासकीय प्रतिनिधी व प्रशासकीय प्रमुख असतो. पंचायतचे दैनंदिन कामकाज, नोंदी, लेखा व शासन योजनांची अंमलबजावणी करणे हे त्याचे मुख्य कार्य असते.
+                <td class="p-4 border border-gray-200 text-[12px] md:block hidden">
+                  ग्रामसेवक हा ग्रामपंचायतीचा शासकीय प्रतिनिधी व प्रशासकीय
+                  प्रमुख असतो. पंचायतचे दैनंदिन कामकाज, नोंदी, लेखा व शासन
+                  योजनांची अंमलबजावणी करणे हे त्याचे मुख्य कार्य असते.
                 </td>
               </tr>
-
 
               <tr>
                 <td class="p-4 text-[14px] border border-gray-200 bg-[#fff7ec] font-semibold text-center">
                   ग्राम रोजगार सहाय्यक
                 </td>
                 <td class="p-4 border border-gray-200 text-[12px]">
-                  ग्रामपंचायतीचे सर्व संगणकीय नोंदी, अहवाल, पत्रव्यवहार आणि दस्तऐवज तयार करणे व संग्रहीत ठेवणे. ग्रामपंचायतीच्या ई-पंचायत प्रणाली, ऑनलाइन कर वसुली, जनगणना व इतर शासन प्रणालींमध्ये डेटा प्रविष्ट करणे. ग्रामपंचायतीच्या संकेतस्थळाचे (Website) अद्ययावत राखणे आणि आवश्यक माहिती अपलोड करणे. ग्रामसेवक व सरपंच यांच्या सूचनेनुसार विविध शासकीय फॉर्म, पत्रे व अहवाल तयार करणे. कार्यालयीन संगणक, प्रिंटर, स्कॅनर, इंटरनेट व नेटवर्कची देखभाल करणे. ग्रामपंचायतीच्या डिजिटल नोंदींची बॅकअप व्यवस्था ठेवणे आणि माहितीची सुरक्षितता सुनिश्चित करणे. नागरिकांना ऑनलाइन सेवा (जसे जन्म/मृत्यू दाखले, मालमत्ता कर पावत्या इ.) पुरविण्यात सहाय्य करणे. ग्रामपंचायतीच्या योजनांशी संबंधित माहिती व आकडेवारी सादर करणे. ई-मेल, एमआयएस (MIS) आणि इतर शासकीय पोर्टलवर आवश्यक डेटा सादर करणे.
+                  ग्रामपंचायतीचे सर्व संगणकीय नोंदी, अहवाल, पत्रव्यवहार आणि
+                  दस्तऐवज तयार करणे व संग्रहीत ठेवणे. ग्रामपंचायतीच्या ई-पंचायत
+                  प्रणाली, ऑनलाइन कर वसुली, जनगणना व इतर शासन प्रणालींमध्ये डेटा
+                  प्रविष्ट करणे. ग्रामपंचायतीच्या संकेतस्थळाचे (Website)
+                  अद्ययावत राखणे आणि आवश्यक माहिती अपलोड करणे. ग्रामसेवक व सरपंच
+                  यांच्या सूचनेनुसार विविध शासकीय फॉर्म, पत्रे व अहवाल तयार
+                  करणे. कार्यालयीन संगणक, प्रिंटर, स्कॅनर, इंटरनेट व नेटवर्कची
+                  देखभाल करणे. ग्रामपंचायतीच्या डिजिटल नोंदींची बॅकअप व्यवस्था
+                  ठेवणे आणि माहितीची सुरक्षितता सुनिश्चित करणे. नागरिकांना
+                  ऑनलाइन सेवा (जसे जन्म/मृत्यू दाखले, मालमत्ता कर पावत्या इ.)
+                  पुरविण्यात सहाय्य करणे. ग्रामपंचायतीच्या योजनांशी संबंधित
+                  माहिती व आकडेवारी सादर करणे. ई-मेल, एमआयएस (MIS) आणि इतर
+                  शासकीय पोर्टलवर आवश्यक डेटा सादर करणे.
                 </td>
-                <td class="p-4 border border-gray-200 text-[12px]">
-                  संगणक परिचालक हा ग्रामपंचायतीच्या कार्यालयीन कामकाजासाठी संगणक प्रणाली, सॉफ्टवेअर आणि डिजिटल साधनांचा वापर करून प्रशासनिक कार्ये सुलभ करण्याचे कार्य करतो. ग्रामपंचायतीचे सर्व डिजिटल नोंदी, अहवाल, ई-गव्हर्नन्स उपक्रम, आणि ऑनलाइन सेवा यांचे व्यवस्थापन करणे ही त्याची मुख्य भूमिका असते.
+                <td class="p-4 border border-gray-200 text-[12px] md:block hidden">
+                  संगणक परिचालक हा ग्रामपंचायतीच्या कार्यालयीन कामकाजासाठी संगणक
+                  प्रणाली, सॉफ्टवेअर आणि डिजिटल साधनांचा वापर करून प्रशासनिक
+                  कार्ये सुलभ करण्याचे कार्य करतो. ग्रामपंचायतीचे सर्व डिजिटल
+                  नोंदी, अहवाल, ई-गव्हर्नन्स उपक्रम, आणि ऑनलाइन सेवा यांचे
+                  व्यवस्थापन करणे ही त्याची मुख्य भूमिका असते.
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-
-
+      <div className="w-full bg-[#fcf7f2] py-2 lg:py-10">
+        <h2 className="font-bold text-black text-sm lg:text-2xl text-center">मुख्य व आपत्कालीन संपर्क</h2>
+        <p className="text-base lg:text-sm text-center mt-3">महत्वाचे विभाग आणि आपत्कालीन संपर्क क्रमांक खालीलप्रमाणे आहेत.</p>
+        <Box title="आपत्कालीन संपर्क माहिती सध्या उपलब्ध नाही." classname="w-[500px] p-0 rounded-xl border border-dashed border-orange-400"/>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default AboutUs
+export default AboutUs;
 
 export const officers = [
   {
@@ -201,11 +270,10 @@ export const officers = [
     title: "श्रीमती बाजुबाई भूपेंद्र वसावे",
     position: "सरपंच, ग्रामपंचायत",
     contact: {
-      number: 132648566
-    }
-  }
-]
-
+      number: 132648566,
+    },
+  },
+];
 
 export const Administration = [
   {
@@ -214,8 +282,8 @@ export const Administration = [
     title: "श्रीमती बाजुबाई भूपेंद्र वसावे",
     position: "सरपंच, ग्रामपंचायत",
     contact: {
-      number: 132648566
-    }
+      number: 132648566,
+    },
   },
   {
     id: 2,
@@ -223,8 +291,8 @@ export const Administration = [
     title: "श्री दावा देवलसिंग वसावे",
     position: "उपसरपंच, ग्रामपंचायत",
     contact: {
-      number: 132648566
-    }
+      number: 132648566,
+    },
   },
   {
     id: 3,
@@ -232,10 +300,10 @@ export const Administration = [
     title: "श्रीमती कविता अरुण जोशी",
     position: "ग्रामपंचायत अधिकारी",
     contact: {
-      number: 132648566
-    }
-  }
-]
+      number: 132648566,
+    },
+  },
+];
 
 export const members = [
   {
@@ -244,8 +312,8 @@ export const members = [
     title: "श्री भूपेंद्र कथु वसावे",
     position: "ग्रामपंचायत सदस्य, ग्रामपंचायत",
     contact: {
-      number: 132648566
-    }
+      number: 132648566,
+    },
   },
   {
     id: 2,
@@ -253,8 +321,8 @@ export const members = [
     title: "श्री दशरथ विष्णू पाडवी",
     position: "ग्रामपंचायत सदस्य, ग्रामपंचायत",
     contact: {
-      number: 132648566
-    }
+      number: 132648566,
+    },
   },
   {
     id: 3,
@@ -262,8 +330,8 @@ export const members = [
     title: "श्रीमती एरिना सुनील पाडवी",
     position: "ग्रामपंचायत सदस्य, ग्रामपंचायत",
     contact: {
-      number: 132648566
-    }
+      number: 132648566,
+    },
   },
   {
     id: 4,
@@ -271,7 +339,7 @@ export const members = [
     title: "श्रीमती सरिता किरण वसावे",
     position: "ग्रामपंचायत सदस्य, ग्रामपंचायत",
     contact: {
-      number: 132648566
-    }
-  }
-]
+      number: 132648566,
+    },
+  },
+];

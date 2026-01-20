@@ -3,7 +3,7 @@ import { Phone } from "lucide-react"
 const Smallcards = ({ data }) => {
     return (
         <>
-            <div className='py-4 min-w-[345px] flex items-center justify-start gap-2 text-left bg-[#fff] hover:-translate-y-2 transition px-4 py-4  shadow-[0px_0px_12px_#bfbfbf]' >
+            <div className='py-4 md:min-w-[345px] min-w-[100%] flex items-center justify-start gap-2 text-left bg-[#fff] hover:-translate-y-2 transition px-4 py-4  shadow-[0px_0px_12px_#bfbfbf]' >
                 <figure className='h-20 w-20 mb-[0px] rounded-[50%]'>
                     <img src={data.imgsrc} alt="" className='w-[100%] h-[100%]' />
                 </figure>

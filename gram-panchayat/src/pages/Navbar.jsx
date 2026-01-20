@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { SlMenu } from "react-icons/sl";
+import { TiThMenu } from "react-icons/ti";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -34,8 +34,8 @@ const Navbar = () => {
   const bottomMenu = menuItems.slice(-2);
   return (
     <header className="bg-white lg:py-5">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-center h-16">
+      <div className="w-full px-5 lg:max-w-7xl lg:mx-auto lg-px-4">
+        <div className="flex items-center justify-center h-4 lg:h-16">
           {/* Desktop Menu */}
           <nav className="hidden lg:flex justify-center space-x-6">
             {topMenu.map((item, index) => {
@@ -100,10 +100,10 @@ const Navbar = () => {
         </div>
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-gray-800"
+          className="text-3xl lg:hidden text-gray-800"
           onClick={() => setOpen(!open)}
         >
-          <SlMenu />
+          <TiThMenu />
         </button>
         {/* Mobile Menu */}
         {open && (

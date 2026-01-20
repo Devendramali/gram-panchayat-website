@@ -6,9 +6,9 @@ const GrampanchayatPrashsan = () => {
   
   return (
     <>
-    <div className="grampanchayatmain bg-white bg-dot py-[90px]">
+    <div className="grampanchayatmain bg-white bg-dot px-5 py-[90px]">
       <SectionHeader title="ग्रामपंचायत प्रशासन" classname="mb-[60px]"/>
-      <div className="m-auto flex gap-[40px] justify-center">
+      <div className="m-auto flex flex-wrap gap-[40px] justify-center">
         {Administration.map((item) => (
             <BigCards key={item.id} data={item} />
           ))}
@@ -23,8 +23,8 @@ const GrampanchayatPrashsan = () => {
       </div>
     </div>
     <div className="bg-white py-[90px]">
-      <div className="max-w-[1000px] px-6 m-auto grid gap-5 grid-cols-12">
-        <div className="col-span-7">
+      <div className="max-w-[1000px] mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div className="md:col-span-7 col-span-12">
           <SectionHeader title="शासकीय शाळा मराठी" classname="mb-[30px]" />
             <div className="flex gap-2 justify-center items-center">
               <figure className="mb-0 bg-[#FD7E14] w-9 h-9 flex rounded-[50px] justify-center items-center">
@@ -57,7 +57,7 @@ const GrampanchayatPrashsan = () => {
             </div>
 
         </div>
-         <div className="col-span-5">
+         <div className="md:col-span-5 col-span-12">
           <figure className="h-[100%] w-[100%]">
             <img src="./school.webp" alt=""  className="h-[100%] w-[100%]"/>
           </figure>
@@ -96,13 +96,13 @@ export const Administration =[
   {
     id:1,
     imgsrc:"./user-circle.svg",
-    title:"श्रीमती बाजुबाई भूपेंद्र वसावे",
+    title:"श्री.भालेराव तोडू कोकणी",
     position:"सरपंच, ग्रामपंचायत"
   },
    {
     id:2,
     imgsrc:"./user-circle.svg",
-    title:"श्री दावा देवलसिंग वसावे",
+    title:"श्री.रूपसिंग केसू वळवी",
     position:"उपसरपंच, ग्रामपंचायत"
   }
 ]
@@ -111,25 +111,25 @@ export const members =[
   {
     id:1,
     imgsrc:"./user-circle.svg",
-    title:"श्री भूपेंद्र कथु वसावे",
+    title:"श्री.संतोषकुमार जयसिंग गवळी",
     position:"ग्रामपंचायत सदस्य, ग्रामपंचायत"
   },
    {
     id:2,
     imgsrc:"./user-circle.svg",
-    title:"श्री दशरथ विष्णू पाडवी",
+    title:"सौ.उषाबाई रतिलाल साळी",
       position:"ग्रामपंचायत सदस्य, ग्रामपंचायत"
   },
    {
     id:3,
     imgsrc:"./user-circle.svg",
-    title:"श्रीमती एरिना सुनील पाडवी",
+    title:"सौ.अप्सराबाई अमरनाथ कोकणी",
     position:"ग्रामपंचायत सदस्य, ग्रामपंचायत"
   },
    {
     id:4,
     imgsrc:"./user-circle.svg",
-    title:"श्रीमती सरिता किरण वसावे",
+    title:"सौ.सुभद्रा विकास कोकणी",
     position:"ग्रामपंचायत सदस्य, ग्रामपंचायत"
   }
 ]

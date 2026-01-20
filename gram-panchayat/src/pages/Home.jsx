@@ -9,27 +9,67 @@ import SectionHeader from "../component/SectionHeader";
 import Herobanner from "../component/Herobanner";
 import MediumCard from "../component/cards/MediumCard";
 import BigCards from "../component/cards/BigCards";
+import Card from "../component/cards/Card";
+import Button from "../component/cards/Button";
+
+const members = [
+  {
+    name: "जयकुमार गोरे",
+    post: "माननीय मंत्री, ग्रामविकास व पंचायत राज विभाग",
+    img: "/q.webp",
+  },
+  {
+    name: "एकनाथ शिंदे",
+    post: "माननीय उपमुख्यमंत्री",
+    img: "/w.webp",
+  },
+  {
+    name: "देवेंद्र फडणवीस",
+    post: "माननीय मुख्यमंत्री",
+    img: "/e.webp",
+  },
+  {
+    name: "अजित पवार",
+    post: "माननीय उपमुख्यमंत्री",
+    img: "/r.jpg",
+  },
+  {
+    name: "योगेश कदम",
+    post: "माननीय राज्यमंत्री, ग्रामविकास व पंचायत राज विभाग",
+    img: "/t.webp",
+  },
+  {
+    name: "एकनाथ डवले",
+    post: "प्रधान सचिव, ग्रामविकास व पंचायत राज विभाग",
+    img: "/y.webp",
+  },
+  {
+    name: "डॉ. प्रविण जाधव",
+    post: "विभागीय आयुक्त (नाशिक)",
+    img: "/u.jpg",
+  },
+];
 
 const slides = [
   {
     image:
       "https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1lbnxlbnwwfHwwfHx8MA==",
     title: "ग्रामपंचायत",
-    subtitle: "वावडी",
+    subtitle: "पळसुन",
     desc: "शाश्वत विकासाच्या दिशेने, गावातील प्रत्येक नागरिकाच्या सहभागातून, शिक्षण, आरोग्य, पाणी, स्वच्छता, आणि डिजिटायझेशन यांचा समन्वय साधत ,गाव घडवण्यासाठी कटीबद्ध एक सक्षम ग्रामपंचायत.",
   },
   {
     image:
       "https://static.vecteezy.com/system/resources/thumbnails/070/069/943/small/a-man-in-a-suit-and-bow-tie-looking-up-at-the-sky-free-photo.jpg",
     title: "ग्रामपंचायत",
-    subtitle: "वावडी",
+    subtitle: "पळसुन",
     desc: "शाश्वत विकासाच्या दिशेने, गावातील प्रत्येक नागरिकाच्या सहभागातून, शिक्षण, आरोग्य, पाणी, स्वच्छता, आणि डिजिटायझेशन यांचा समन्वय साधत ,गाव घडवण्यासाठी कटीबद्ध एक सक्षम ग्रामपंचायत.",
   },
   {
     image:
       "https://static.vecteezy.com/system/resources/thumbnails/070/069/943/small/a-man-in-a-suit-and-bow-tie-looking-up-at-the-sky-free-photo.jpg",
     title: "ग्रामपंचायत",
-    subtitle: "वावडी",
+    subtitle: "पळसुन",
     desc: "शाश्वत विकासाच्या दिशेने, गावातील प्रत्येक नागरिकाच्या सहभागातून, शिक्षण, आरोग्य, पाणी, स्वच्छता, आणि डिजिटायझेशन यांचा समन्वय साधत ,गाव घडवण्यासाठी कटीबद्ध एक सक्षम ग्रामपंचायत.",
   },
 ];
@@ -67,6 +107,9 @@ const Home = () => {
 
     return () => clearInterval(timer);
   }, []);
+
+  const firstRow = members.slice(0, 5);
+  const lastRow = members.slice(5);
   return (
     <>
       <div className="relative h-[70vh] overflow-hidden">
@@ -129,97 +172,119 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="py-[60px]">
-            <SectionHeader title="माननीय मंत्री व पदाधिकारी" classname="mb-[60px] underline1" />
+      <div className="w-full py-3 px-3 sm:px-6">
+        <div className="max-w-7xl bg-[#FEEFDD] mx-auto flex flex-col lg:flex-row items-center gap-3">
+          {/* LEFT OR TOP LABEL */}
+          <div className="bg-orange-600 md:w-fit w-full text-center md:justify-start justify-center text-white px-4 py-2 flex items-center gap-2 shrink-0">
+            <span className="text-lg">📢</span>
+            <span className="font-semibold text-sm sm:text-base">
+              आजचा सुविचार:
+            </span>
+          </div>
 
-            <div className="px-6 flex gap-4 justify-center flex-wrap">
-              <div className="p-3 mt-12 bg-[#fff] w-[250px] transition hover:scale-[1.1] h-[300px] rounded-[18px]">
-                <figure className="h-[200px]">
-                  <img src="./q.webp" className="h-full object-cover" alt="" />
-                </figure>
-                <h2 className="text-[18px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
-                <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
-              </div>
-              <div className="p-3 mt-6 bg-[#fff] w-[250px] transition hover:scale-[1.1] h-[300px] rounded-[18px]">
-                <figure className="h-[200px]">
-                  <img src="./w.webp" className="h-full object-cover" alt="" />
-                </figure>
-                <h2 className="text-[18px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
-                <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
-              </div>
-              <div className="p-3 bg-[#fff] w-[250px] transition hover:scale-[1.1] h-[300px] rounded-[18px]">
-                <figure className="h-[200px]">
-                  <img src="./e.webp" className="h-full object-cover" alt="" />
-                </figure>
-                <h2 className="text-[18px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
-                <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
-              </div>
-              <div className="p-3 mt-6 bg-[#fff] w-[250px] transition hover:scale-[1.1] h-[300px] rounded-[18px]">
-                <figure className="h-[200px]">
-                  <img src="./r.jpg" className="h-full object-cover" alt="" />
-                </figure>
-                <h2 className="text-[18px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
-                <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
-              </div>
-              <div className="p-3 mt-12 bg-[#fff] w-[250px] transition hover:scale-[1.1] h-[300px] rounded-[18px]">
-                <figure className="h-[200px]">
-                  <img src="./t.webp" className="h-full object-cover" alt="" />
-                </figure>
-                <h2 className="text-[18px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
-                <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
-              </div>
-
-
-                <div className="p-3  bg-[#fff] w-[200px] transition hover:scale-[1.1] h-[280px] rounded-[18px]">
-                <figure className="h-[170px]">
-                  <img src="./y.webp" className="h-full object-cover" alt="" />
-                </figure>
-                <h2 className="text-[16px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
-                <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
-              </div>
-              <div className="p-3 bg-[#fff] w-[200px] transition hover:scale-[1.1] h-[280px] rounded-[18px]">
-                <figure className="h-[170px]">
-                  <img src="./u.jpg" className="h-full object-cover" alt="" />
-                </figure>
-                <h2 className="text-[16px] font-[700] text-center mt-4">जयकुमार गोरे</h2>
-                <p className="text-[12px] text-center">माननीय मंत्री, ग्रामविकास व पंचायतराज विभाग</p>
-              </div>
-            </div>
-
+          {/* RIGHT / TEXT */}
+          <div className="text-center w-full lg:text-left text-sm sm:text-base text-gray-800 leading-relaxed">
+            <marquee
+              behavior="scroll"
+              direction="left"
+              onmouseover="this.stop();"
+              onmouseout="this.start();"
+              scrollamount="6"
+            >
+                🌸 जे मिळालंय त्याबद्दल कृतज्ञ राहा आणि जे मिळवायचं आहे त्यासाठी
+                प्रयत्न करा. 🌸
+            </marquee>
+          </div>
+        </div>
       </div>
+      {/* -------- */}
+      <div className="max-w-[1300px] mx-auto px-4 py-16">
+        {/* FIRST ROW */}
+        <SectionHeader
+          title="माननीय मंत्री व पदाधिकारी"
+          classname="mb-[60px] underline1"
+        />
+        <div
+          className="grid gap-6 
+        grid-cols-1 
+        sm:grid-cols-2 
+        md:grid-cols-3 
+        lg:grid-cols-5 
+        justify-items-center"
+        >
+          {firstRow.map((item, index) => (
+            <Card
+              key={index}
+              item={item}
+              raised={index === 1 || index === 2 || index === 3}
+            />
+          ))}
+        </div>
+
+        {/* LAST ROW CENTER */}
+        <div className="flex justify-center gap-6 mt-8 flex-wrap">
+          {lastRow.map((item, index) => (
+            <Card key={index} item={item} />
+          ))}
+        </div>
+      </div>
+      {/* ------------- */}
+
       <div className="py-[60px] bg-[#fff]">
-            <SectionHeader title="आमचे प्रशासकीय अधिकारी" classname="mb-[60px] underline1" />
-         <div className="m-auto flex justify-center gap-5">
-          {
-              officers.map((item)=>(
-                <MediumCard data={item}/>
-              ))
-          }
-         </div>
+        <SectionHeader
+          title="आमचे प्रशासकीय अधिकारी"
+          classname="mb-[60px] underline1"
+        />
+        <div className="m-auto flex justify-center gap-5">
+          {officers.map((item) => (
+            <MediumCard data={item} />
+          ))}
+        </div>
       </div>
-      <div className="grampanchayatmain bg-[#f6f7fa] py-[60px]">
-        <SectionHeader title="ग्रामपंचायतीचे माननीय सदस्य" classname="mb-[60px] " />
+      <div className="grampanchayatmain px-6 bg-[#f6f7fa] py-[60px]">
+        <SectionHeader
+          title="ग्रामपंचायतीचे माननीय सदस्य"
+          classname="mb-[60px] "
+        />
         <div className="m-auto max-w-[1000px] flex-wrap flex gap-[40px] justify-center">
           {Administration.map((item) => (
             <BigCards key={item.id} data={item} />
           ))}
-
         </div>
+        <div className="w-full flex justify-center mt-10">
+          <Button text="अधिक पहा..."/>
         </div>
-        <div className="py-[60px] pb-[150px] bg-[#fff]">
-          <div className="flex max-w-[1200px] m-auto">
-            <div className="">
-              <span className="text-[14px]">आमच्याबद्दल जाणून घ्या</span>
-              <SectionHeader title="ग्रामपंचायतीचे माननीय सदस्य" classname="mb-[20px] text-left " />
-              <p className="text-[15px]">ही ग्रामपंचायत संबंधित पंचायत समिती अंतर्गत कार्यरत असून तिच्या अखत्यारीत ३ गावे समाविष्ट आहेत...नागरिक माहिती </p>
-            </div>
-            <div className="relative min-w-[500px]">
-              <img src="./about1.webp" className="w-[350px] bg-[#fff] p-1 rounded-[24px] shadow-[1px_1px_12px_#bfbfbf]" alt="" />
-              <img src="./about2.webp" className="w-[350px] absolute top-[80px] bg-[#fff] p-1 rounded-[24px] shadow-[1px_1px_12px_#bfbfbf] right-0" alt="" />
-            </div>
+      </div>
+      <div className="py-[60px] px-5 pb-[150px] bg-[#fff]">
+        <div className="flex flex-col lg:flex-row max-w-[1200px] m-auto">
+          <div className="py-5 lg:py-0">
+            <span className="text-[14px]">आमच्याबद्दल जाणून घ्या</span>
+            <SectionHeader
+              title="ग्रामपंचायतीचे माननीय सदस्य"
+              classname="mb-[20px] text-left "
+            />
+            <p className="text-[15px]">
+              ही ग्रामपंचायत संबंधित पंचायत समिती अंतर्गत कार्यरत असून तिच्या
+              अखत्यारीत ३ गावे समाविष्ट आहेत...नागरिक माहिती{" "}
+            </p>
+            <div className="w-full flex justify-start my-5">
+          <Button text="अधिक पहा..."/>
+        </div>
           </div>
-             
+          <div className="relative lg:min-w-[500px]">
+            <img
+              src="./about1.webp"
+              className="w-full lg:w-[350px] bg-[#fff] p-1 rounded-[24px] shadow-[1px_1px_12px_#bfbfbf]"
+              alt=""
+            />
+            <img
+              src="./about2.webp"
+              className="w-full mt-2 lg:w-[350px] lg:absolute lg:top-[80px] bg-[#fff] p-1 rounded-[24px] shadow-[1px_1px_12px_#bfbfbf] right-0"
+              alt=""
+            />
+          </div>
         </div>
+      </div>
 
       <div className="bg-gray-100 py-10">
         <div className="py-2">
@@ -236,7 +301,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mt-10 w-full flex flex-col justify-center">
+      <div className="mt-10 px-5 w-full flex flex-col justify-center">
         <div className="py-2">
           <SectionHeader
             title="आमचे कार्यक्रम म्हणजे गावाला सक्षम, स्वयंपूर्ण आणि आधुनिक बनवण्याचा एक सामूहिक प्रयत्न आहे"
@@ -244,6 +309,9 @@ const Home = () => {
           />
         </div>
         <VillageCard />
+        <div className="w-full flex justify-center my-5">
+          <Button text="अधिक पहा..."/>
+        </div>
       </div>
 
       <div className="bg-pink-50 py-[60px]">
@@ -251,23 +319,20 @@ const Home = () => {
           <SectionHeader title="ग्रामपंचायतीच्या सूचना" classname="mb-[0px]" />
         </div>
         {/* <Suchanacard /> */}
-          <div className="mt-[60px] max-w-[1200px] m-auto px-6">
-            {
-              Noticeslist.length === 0 && (
-                <p className="text-center text-[#595450]">कोणतीही सूचना सापडली नाही 😕</p>
-              )
-            }
+        <div className="mt-[60px] max-w-[1200px] m-auto px-6">
+          {Noticeslist.length === 0 && (
+            <p className="text-center text-[#595450]">
+              कोणतीही सूचना सापडली नाही 😕
+            </p>
+          )}
 
-
-            {
-              Noticeslist.map((item)=>(
-                  <Suchanacard key={item.id} data={item}/>
-              ))
-            }
-            
-           
-
-          </div>
+          {Noticeslist.map((item) => (
+            <Suchanacard key={item.id} data={item} />
+          ))}
+        </div>
+        <div className="w-full flex justify-center my-5">
+          <Button text="अधिक पहा..."/>
+        </div>
       </div>
 
       <div className="pt-5">
@@ -277,6 +342,9 @@ const Home = () => {
         <p className="text-[14px] text-zinc-700 text-center">
           ग्रामीण जीवन, घटना आणि नैसर्गिक सौंदर्याची झलक.
         </p>
+        <div className="w-full flex justify-center my-5">
+          <Button text="अधिक पहा..."/>
+        </div>
         <Herobanner />
       </div>
     </>
@@ -289,56 +357,59 @@ export const officers = [
   {
     id: 1,
     imgsrc: "./user-circle.svg",
-    title: "श्रीमती बाजुबाई भूपेंद्र वसावे",
-    position: "सरपंच, ग्रामपंचायत",
+    title: "परमेश्वर विठोबा गंडे",
+    position: "ग्रामपंचायत अधिकारी",
     contact: {
-      number: 132648566
-    }
-  }
-]
-
+      number: 9421477822,
+    },
+  },
+];
 
 export const Noticeslist = [
   {
-    id:1,
-    imgSrc:"./announcedefault.jpg",
-    title:"मतदार यादी प्रसिद्ध करणे.",
-    discription:"जिल्हा परिषद निवडणूक विभाग व पंचायत समिती गणाची प्रारूप मतदार यादी प्रसिद्ध करणे साठी मा. राज्य निवडणूक क आयोग याच्या कडील आदेश क्र./राणीआ/जि. प.प. स./2025/प्र. क्र.20/का7 दिनांक-23/09/2025",
-    date:"13/10/2025"
+    id: 1,
+    imgSrc: "./announcedefault.jpg",
+    title: "मतदार यादी प्रसिद्ध करणे.",
+    discription:
+      "जिल्हा परिषद निवडणूक विभाग व पंचायत समिती गणाची प्रारूप मतदार यादी प्रसिद्ध करणे साठी मा. राज्य निवडणूक क आयोग याच्या कडील आदेश क्र./राणीआ/जि. प.प. स./2025/प्र. क्र.20/का7 दिनांक-23/09/2025",
+    date: "13/10/2025",
   },
-    {
-    id:2,
-    imgSrc:"./announcedefault.jpg",
-    title:"दिनांक ०७/१०/२०२५ रोजी सर्व ऑनपद्तीने चे कागदपत्रेसाठी कम्प लावल्यात आला आहे",
-    discription:"जिल्हा परिषद निवडणूक विभाग व पंचायत समिती गणाची प्रारूप मतदार यादी प्रसिद्ध करणे साठी मा. राज्य निवडणूक क आयोग याच्या कडील आदेश क्र./राणीआ/जि. प.प. स./2025/प्र. क्र.20/का7 दिनांक-23/09/2025",
-    date:"13/10/2025"
+  {
+    id: 2,
+    imgSrc: "./announcedefault.jpg",
+    title:
+      "दिनांक ०७/१०/२०२५ रोजी सर्व ऑनपद्तीने चे कागदपत्रेसाठी कम्प लावल्यात आला आहे",
+    discription:
+      "जिल्हा परिषद निवडणूक विभाग व पंचायत समिती गणाची प्रारूप मतदार यादी प्रसिद्ध करणे साठी मा. राज्य निवडणूक क आयोग याच्या कडील आदेश क्र./राणीआ/जि. प.प. स./2025/प्र. क्र.20/का7 दिनांक-23/09/2025",
+    date: "13/10/2025",
   },
-    {
-    id:3,
-    imgSrc:"./announcedefault.jpg",
-    title:"मतदार यादी प्रसिद्ध करणे.",
-    discription:"जिल्हा परिषद निवडणूक विभाग व पंचायत समिती गणाची प्रारूप मतदार यादी प्रसिद्ध करणे साठी मा. राज्य निवडणूक क आयोग याच्या कडील आदेश क्र./राणीआ/जि. प.प. स./2025/प्र. क्र.20/का7 दिनांक-23/09/2025",
-    date:"13/10/2025"
-  }
-]
+  {
+    id: 3,
+    imgSrc: "./announcedefault.jpg",
+    title: "मतदार यादी प्रसिद्ध करणे.",
+    discription:
+      "जिल्हा परिषद निवडणूक विभाग व पंचायत समिती गणाची प्रारूप मतदार यादी प्रसिद्ध करणे साठी मा. राज्य निवडणूक क आयोग याच्या कडील आदेश क्र./राणीआ/जि. प.प. स./2025/प्र. क्र.20/का7 दिनांक-23/09/2025",
+    date: "13/10/2025",
+  },
+];
 
 export const Administration = [
   {
     id: 1,
     imgsrc: "./user-circle.svg",
-    title: "श्रीमती बाजुबाई भूपेंद्र वसावे",
+    title: "श्री.भालेराव तोडू कोकणी",
     position: "सरपंच, ग्रामपंचायत",
     contact: {
-      number: 132648566
-    }
+      number: 132648566,
+    },
   },
   {
     id: 2,
     imgsrc: "./user-circle.svg",
-    title: "श्री दावा देवलसिंग वसावे",
+    title: "श्री.रूपसिंग केसू वळवी",
     position: "उपसरपंच, ग्रामपंचायत",
     contact: {
-      number: 132648566
-    }
-  }
-]
+      number: 132648566,
+    },
+  },
+];

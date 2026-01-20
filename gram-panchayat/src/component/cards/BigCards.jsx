@@ -4,7 +4,7 @@ import {Phone} from "lucide-react"
 const BigCards = ({data}) => {
   return (
     <>
-    <div className='py-4 min-w-[340px] text-center bg-[#fff] px-8 py-8 rounded-[24px] shadow-[0px_0px_12px_#bfbfbf]' >
+    <div className='py-4 md:min-w-[340px] min-w-[100%] text-center bg-[#fff] px-8 py-8 rounded-[24px] shadow-[0px_0px_12px_#bfbfbf]' >
         <figure className='h-40 w-40 m-auto mb-[30px] rounded-[50%]'>
             <img src={data.imgsrc} alt="" className='w-[100%] h-[100%]' />
         </figure>
