@@ -5,8 +5,8 @@ const BigCards = ({data}) => {
   return (
     <>
     <div className='py-4 md:min-w-[340px] min-w-[100%] text-center bg-[#fff] px-8 py-8 rounded-[24px] shadow-[0px_0px_12px_#bfbfbf]' >
-        <figure className='h-40 w-40 m-auto mb-[30px] rounded-[50%]'>
-            <img src={data.imgsrc} alt="" className='w-[100%] h-[100%]' />
+        <figure className='h-40 w-40 m-auto mb-[30px] rounded-[50%] overflow-hidden'>
+            <img src={data.imgsrc} alt="" className='w-[100%] h-[100%] object-cover ' />
         </figure>
         <h2 className='text-[22px] mb-3 font-[700]'>{data.title}</h2>
         <p className='text-[16px]'>{data.position}</p>

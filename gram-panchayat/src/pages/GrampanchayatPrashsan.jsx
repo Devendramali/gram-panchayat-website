@@ -92,44 +92,98 @@ export const item1=[
       position:"शासकीय शाळा मराठी मुख्याध्यापक"
   }
 ]
-export const Administration =[
-  {
-    id:1,
-    imgsrc:"./user-circle.svg",
-    title:"श्री.भालेराव तोडू कोकणी",
-    position:"सरपंच, ग्रामपंचायत"
-  },
+export const Administration = [
    {
-    id:2,
-    imgsrc:"./user-circle.svg",
-    title:"श्री.रूपसिंग केसू वळवी",
-    position:"उपसरपंच, ग्रामपंचायत"
-  }
-]
+    id: 1,
+    imgsrc: "./public/member/1.webp",
+    title: "श्री.भालेराव तोडू कोकणी ",
+    position: "सरपंच, पळसुन ",
+    contact: {
+      number: 132648566,
+    },
+  },
+    {
+    id: 3,
+    imgsrc: "./user-circle.svg",
+    title: "श्री.रूपसिंग केसू वळवी",
+    position: "उपसरपंच",
+    contact: {
+      number: 132648566,
+    },
+  },
+  {
+    id: 2,
+    imgsrc: "./public/member/6.webp",
+    title: "-----",
+    position: "ग्रामारोजगार सेवक ",
+    contact: {
+      number: 132648566,
+    },
+  },
+];
 
-export const members =[
+export const members = [
   {
-    id:1,
-    imgsrc:"./user-circle.svg",
-    title:"श्री.संतोषकुमार जयसिंग गवळी",
-    position:"ग्रामपंचायत सदस्य, ग्रामपंचायत"
+    id: 1,
+    imgsrc: "./public/member/5.webp",
+    title: "श्री.संतोषकुमार जयसिंग गवळी",
+    position: "ग्रामपंचायत सदस्य, पळसुन ",
+    contact: {
+      number: 132648566,
+    },
   },
-   {
-    id:2,
-    imgsrc:"./user-circle.svg",
-    title:"सौ.उषाबाई रतिलाल साळी",
-      position:"ग्रामपंचायत सदस्य, ग्रामपंचायत"
+  {
+    id: 2,
+    imgsrc: "./public/member/4.webp",
+    title: "सौ.उषाबाई रतिलाल साळी",
+    position: "ग्रामपंचायत सदस्य, पळसुन ",
+    contact: {
+      number: 132648566,
+    },
   },
-   {
-    id:3,
-    imgsrc:"./user-circle.svg",
-    title:"सौ.अप्सराबाई अमरनाथ कोकणी",
-    position:"ग्रामपंचायत सदस्य, ग्रामपंचायत"
+  {
+    id: 3,
+    imgsrc: "./public/member/3.webp",
+    title: "सौ.अप्सराबाई अमरनाथ कोकणी",
+    position: "ग्रामपंचायत सदस्य, पळसुन ",
+    contact: {
+      number: 132648566,
+    },
   },
-   {
-    id:4,
-    imgsrc:"./user-circle.svg",
-    title:"सौ.सुभद्रा विकास कोकणी",
-    position:"ग्रामपंचायत सदस्य, ग्रामपंचायत"
-  }
-]
+  {
+    id: 4,
+    imgsrc: "./user-circle.svg",
+    title: "सौ.सुभद्रा विकास कोकणी ",
+    position: "ग्रामपंचायत सदस्य, पळसुन ",
+    contact: {
+      number: 132648566,
+    },
+  },
+  {
+    id: 5,
+    imgsrc: "./public/member/7.webp",
+    title: "सौ.अस्मिता उपेंद्र कोकणी",
+    position: "ग्रामपंचायत सदस्य, पळसुन ",
+    contact: {
+      number: 132648566,
+    },
+  },
+  {
+    id: 6,
+    imgsrc: "./public/member/6.webp",
+    title: "श्री.अमन बाबुलाल कोकणी",
+    position: "ग्रामपंचायत सदस्य, पळसुन ",
+    contact: {
+      number: 132648566,
+    },
+  },
+  {
+    id: 7,
+    imgsrc: "./user-circle.svg",
+    title: "सौ.रेखाबाई आखात्या कोकणी",
+    position: "ग्रामपंचायत सदस्य, पळसुन ",
+    contact: {
+      number: 132648566,
+    },
+  },
+];

@@ -6,8 +6,8 @@ const MediumCard = ({ data }) => {
         <>
             <div className='bg-transparent max-w-[240px] rotatecard text-center overflow-hidden relative rounded-[24px] shadow-[0px_0px_12px_#bfbfbf]' >
                 <div className='frontpanel bg-[#fff] px-8 py-8 rounded-[24px]'>
-                    <figure className='h-25 w-25 m-auto mb-[30px] rounded-[50%]'>
-                        <img src={data.imgsrc} alt="" className='w-[100%] h-[100%]' />
+                    <figure className='h-25 w-25 m-auto mb-[30px] rounded-[50%] overflow-hidden '>
+                        <img src={data.imgsrc} alt="" className='w-[100%] h-[100%] object-cover' />
                     </figure>
                     <h2 className='text-[18px] mb-3 font-[700]'>{data.title}</h2>
                     <p className='text-[16px]'>{data.position}</p>

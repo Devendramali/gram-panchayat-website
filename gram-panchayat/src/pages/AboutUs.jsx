@@ -266,39 +266,40 @@ export default AboutUs;
 export const officers = [
   {
     id: 1,
-    imgsrc: "./user-circle.svg",
-    title: "श्रीमती बाजुबाई भूपेंद्र वसावे",
-    position: "सरपंच, ग्रामपंचायत",
+    // imgsrc: "./user-circle.svg",
+    imgsrc: "./public/member/adhikari.webp",
+    title: "श्री.परमेश्वर विठोबा गंडे",
+    position: "ग्रामपंचायत अधिकारी, पळसुन ",
     contact: {
-      number: 132648566,
+      number: 9421477822,
     },
   },
 ];
 
 export const Administration = [
-  {
+   {
     id: 1,
+    imgsrc: "./public/member/1.webp",
+    title: "श्री.भालेराव तोडू कोकणी ",
+    position: "सरपंच, पळसुन ",
+    contact: {
+      number: 132648566,
+    },
+  },
+    {
+    id: 3,
     imgsrc: "./user-circle.svg",
-    title: "श्रीमती बाजुबाई भूपेंद्र वसावे",
-    position: "सरपंच, ग्रामपंचायत",
+    title: "श्री.रूपसिंग केसू वळवी",
+    position: "उपसरपंच",
     contact: {
       number: 132648566,
     },
   },
   {
     id: 2,
-    imgsrc: "./user-circle.svg",
-    title: "श्री दावा देवलसिंग वसावे",
-    position: "उपसरपंच, ग्रामपंचायत",
-    contact: {
-      number: 132648566,
-    },
-  },
-  {
-    id: 3,
-    imgsrc: "./user-circle.svg",
-    title: "श्रीमती कविता अरुण जोशी",
-    position: "ग्रामपंचायत अधिकारी",
+    imgsrc: "./public/member/6.webp",
+    title: "------",
+    position: "ग्रामारोजगार सेवक ",
     contact: {
       number: 132648566,
     },
@@ -308,27 +309,27 @@ export const Administration = [
 export const members = [
   {
     id: 1,
-    imgsrc: "./user-circle.svg",
-    title: "श्री भूपेंद्र कथु वसावे",
-    position: "ग्रामपंचायत सदस्य, ग्रामपंचायत",
+    imgsrc: "./public/member/5.webp",
+    title: "श्री.संतोषकुमार जयसिंग गवळी",
+    position: "ग्रामपंचायत सदस्य, पळसुन ",
     contact: {
       number: 132648566,
     },
   },
   {
     id: 2,
-    imgsrc: "./user-circle.svg",
-    title: "श्री दशरथ विष्णू पाडवी",
-    position: "ग्रामपंचायत सदस्य, ग्रामपंचायत",
+    imgsrc: "./public/member/4.webp",
+    title: "सौ.उषाबाई रतिलाल साळी",
+    position: "ग्रामपंचायत सदस्य, पळसुन ",
     contact: {
       number: 132648566,
     },
   },
   {
     id: 3,
-    imgsrc: "./user-circle.svg",
-    title: "श्रीमती एरिना सुनील पाडवी",
-    position: "ग्रामपंचायत सदस्य, ग्रामपंचायत",
+    imgsrc: "./public/member/3.webp",
+    title: "सौ.अप्सराबाई अमरनाथ कोकणी",
+    position: "ग्रामपंचायत सदस्य, पळसुन ",
     contact: {
       number: 132648566,
     },
@@ -336,8 +337,35 @@ export const members = [
   {
     id: 4,
     imgsrc: "./user-circle.svg",
-    title: "श्रीमती सरिता किरण वसावे",
-    position: "ग्रामपंचायत सदस्य, ग्रामपंचायत",
+    title: "सौ.सुभद्रा विकास कोकणी ",
+    position: "ग्रामपंचायत सदस्य, पळसुन ",
+    contact: {
+      number: 132648566,
+    },
+  },
+  {
+    id: 5,
+    imgsrc: "./public/member/7.webp",
+    title: "सौ.अस्मिता उपेंद्र कोकणी",
+    position: "ग्रामपंचायत सदस्य, पळसुन ",
+    contact: {
+      number: 132648566,
+    },
+  },
+  {
+    id: 6,
+    imgsrc: "./public/member/6.webp",
+    title: "श्री.अमन बाबुलाल कोकणी",
+    position: "ग्रामपंचायत सदस्य, पळसुन ",
+    contact: {
+      number: 132648566,
+    },
+  },
+  {
+    id: 7,
+    imgsrc: "./user-circle.svg",
+    title: "सौ.रेखाबाई आखात्या कोकणी",
+    position: "ग्रामपंचायत सदस्य, पळसुन ",
     contact: {
       number: 132648566,
     },
