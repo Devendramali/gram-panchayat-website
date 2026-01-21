@@ -357,7 +357,7 @@ export const officers = [
   {
     id: 1,
     // imgsrc: "./user-circle.svg",
-    imgsrc: "./public/member/adhikari.webp",
+    imgsrc: "./member/adhikari.webp",
     title: "श्री.परमेश्वर विठोबा गंडे",
     position: "ग्रामपंचायत अधिकारी, पळसुन ",
     contact: {
@@ -398,7 +398,7 @@ export const Noticeslist = [
 export const Administration = [
   {
     id: 1,
-    imgsrc: "./public/member/1.webp",
+    imgsrc: "./member/1.webp",
     title: "श्री.भालेराव तोडू कोकणी ",
     position: "सरपंच, पळसुन ",
     contact: {

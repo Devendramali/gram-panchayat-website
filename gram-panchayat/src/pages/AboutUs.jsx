@@ -267,7 +267,7 @@ export const officers = [
   {
     id: 1,
     // imgsrc: "./user-circle.svg",
-    imgsrc: "./public/member/adhikari.webp",
+    imgsrc: "./member/adhikari.webp",
     title: "श्री.परमेश्वर विठोबा गंडे",
     position: "ग्रामपंचायत अधिकारी, पळसुन ",
     contact: {
@@ -279,7 +279,7 @@ export const officers = [
 export const Administration = [
    {
     id: 1,
-    imgsrc: "./public/member/1.webp",
+    imgsrc: "./member/1.webp",
     title: "श्री.भालेराव तोडू कोकणी ",
     position: "सरपंच, पळसुन ",
     contact: {
@@ -297,7 +297,7 @@ export const Administration = [
   },
   {
     id: 2,
-    imgsrc: "./public/member/6.webp",
+    imgsrc: "./member/6.webp",
     title: "------",
     position: "ग्रामारोजगार सेवक ",
     contact: {
@@ -309,7 +309,7 @@ export const Administration = [
 export const members = [
   {
     id: 1,
-    imgsrc: "./public/member/5.webp",
+    imgsrc: "./member/5.webp",
     title: "श्री.संतोषकुमार जयसिंग गवळी",
     position: "ग्रामपंचायत सदस्य, पळसुन ",
     contact: {
@@ -318,7 +318,7 @@ export const members = [
   },
   {
     id: 2,
-    imgsrc: "./public/member/4.webp",
+    imgsrc: "./member/4.webp",
     title: "सौ.उषाबाई रतिलाल साळी",
     position: "ग्रामपंचायत सदस्य, पळसुन ",
     contact: {
@@ -327,7 +327,7 @@ export const members = [
   },
   {
     id: 3,
-    imgsrc: "./public/member/3.webp",
+    imgsrc: "./member/3.webp",
     title: "सौ.अप्सराबाई अमरनाथ कोकणी",
     position: "ग्रामपंचायत सदस्य, पळसुन ",
     contact: {
@@ -345,7 +345,7 @@ export const members = [
   },
   {
     id: 5,
-    imgsrc: "./public/member/7.webp",
+    imgsrc: "./member/7.webp",
     title: "सौ.अस्मिता उपेंद्र कोकणी",
     position: "ग्रामपंचायत सदस्य, पळसुन ",
     contact: {
@@ -354,7 +354,7 @@ export const members = [
   },
   {
     id: 6,
-    imgsrc: "./public/member/6.webp",
+    imgsrc: "./member/6.webp",
     title: "श्री.अमन बाबुलाल कोकणी",
     position: "ग्रामपंचायत सदस्य, पळसुन ",
     contact: {
