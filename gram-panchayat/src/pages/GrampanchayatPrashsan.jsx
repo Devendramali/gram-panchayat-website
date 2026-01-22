@@ -32,7 +32,7 @@ const GrampanchayatPrashsan = () => {
 
               </figure>
               <div>
-                <h3 className="text-[20px] font-[700]">जिल्हा परिषद प्राथमिक शाळा वावडी केंद्र उमराण ता नवापुर जिल्हा नंदुरबार</h3>
+                <h3 className="text-[20px] font-[700]">जिल्हा परिषद प्राथमिक शाळा पळसुन केंद्र उमराण ता नवापुर जिल्हा नंदुरबार</h3>
                 <span className="font-[600] text-[14px]">स्थापना : 1955</span>
               </div>
             </div>

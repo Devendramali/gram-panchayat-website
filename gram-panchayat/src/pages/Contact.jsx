@@ -23,7 +23,7 @@ const Contact = () => {
                 ✉️ <span>grampanchayatvavdi@gmail.com</span>
               </li>
               <li className="flex items-center gap-3">
-                📍 <span>ग्रामपंचायत कार्यालय, वावडी</span>
+                📍 <span>ग्रामपंचायत कार्यालय, पळसुन</span>
               </li>
               <li className="flex items-center gap-3">
                 🗺️ <span>तालुका - नवापूर</span>

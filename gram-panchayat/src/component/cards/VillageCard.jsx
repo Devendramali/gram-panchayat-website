@@ -4,7 +4,7 @@ const VillageCard = () => {
       id: 1,
       title: "एक पेड मां के नाम कार्यक्रम",
       date: "02 November 2025",
-      desc: "ग्राम पंचायत वावडी येथे एक व्यक्ती एक झाड उपक्रम राबविण्यात आला.",
+      desc: "ग्राम पंचायत पळसुन येथे एक व्यक्ती एक झाड उपक्रम राबविण्यात आला.",
       image: "https://static.vecteezy.com/system/resources/thumbnails/053/870/541/small/hillside-village-at-dawn-houses-with-tiled-roofs-and-vibrant-colors-photo.jpeg",
     },
     {
@@ -18,7 +18,7 @@ const VillageCard = () => {
       id: 3,
       title: "कर वसुली उपक्रम",
       date: "01 November 2025",
-      desc: "ग्राम पंचायत वावडी येथे कर वसुली उपक्रम राबविण्यात आला.",
+      desc: "ग्राम पंचायत पळसुन येथे कर वसुली उपक्रम राबविण्यात आला.",
       image: "https://static.vecteezy.com/system/resources/thumbnails/034/318/225/small/a-village-at-dusk-in-the-mountains-ai-generated-free-photo.jpg",
     },
   ];

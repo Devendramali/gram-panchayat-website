@@ -49,7 +49,7 @@ const AboutUs = () => {
             </h3>
 
             <h3 className="text-sm font-bold min-w-[45%]">
-              गाव: <span className="font-normal">वावडी</span>
+              गाव: <span className="font-normal">पळसुन</span>
             </h3>
 
             <h3 className="text-sm font-bold min-w-[45%]">
