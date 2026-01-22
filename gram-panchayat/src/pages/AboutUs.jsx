@@ -288,7 +288,7 @@ export const Administration = [
   },
     {
     id: 3,
-    imgsrc: "./user-circle.svg",
+    imgsrc: "./member/2.webp",
     title: "श्री.रूपसिंग केसू वळवी",
     position: "उपसरपंच",
     contact: {

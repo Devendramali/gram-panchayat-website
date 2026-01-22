@@ -8,7 +8,7 @@ const Herobanner = () => {
           className="relative rounded-2xl overflow-hidden h-[300px] md:h-[320px] flex items-center justify-center"
           style={{
             backgroundImage:
-              "url('https://static.vecteezy.com/system/resources/thumbnails/070/069/943/small/a-man-in-a-suit-and-bow-tie-looking-up-at-the-sky-free-photo.jpg')",
+              "url('./member/slider1.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
