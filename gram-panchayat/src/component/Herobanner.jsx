@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Herobanner = () => {
   return (
@@ -27,7 +27,7 @@ const Herobanner = () => {
 
             <div className="w-full flex justify-center">
               <button className="mt-6 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium transition">
-                <NavLink to="/contact">📞 संपर्क करा </NavLink>
+                <Link to="/contact">📞 संपर्क करा </Link>
               </button>
             </div>
           </div>

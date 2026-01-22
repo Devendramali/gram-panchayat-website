@@ -252,7 +252,7 @@ const Home = () => {
           ))}
         </div>
         <div className="w-full flex justify-center mt-10">
-          <Button text="अधिक पहा..."/>
+          <Button href="/GrampanchayatPrashsan" text="अधिक पहा..."/>
         </div>
       </div>
       <div className="py-[60px] px-5 pb-[150px] bg-[#fff]">
@@ -268,7 +268,7 @@ const Home = () => {
               अखत्यारीत ३ गावे समाविष्ट आहेत...नागरिक माहिती{" "}
             </p>
             <div className="w-full flex justify-start my-5">
-          <Button text="अधिक पहा..."/>
+          <Button href="/about" text="अधिक पहा..."/>
         </div>
           </div>
           <div className="relative lg:min-w-[500px]">
@@ -331,7 +331,7 @@ const Home = () => {
           ))}
         </div>
         <div className="w-full flex justify-center my-5">
-          <Button text="अधिक पहा..."/>
+          <Button text="अधिक पहा..." href="/notices"/>
         </div>
       </div>
 
@@ -343,7 +343,7 @@ const Home = () => {
           ग्रामीण जीवन, घटना आणि नैसर्गिक सौंदर्याची झलक.
         </p>
         <div className="w-full flex justify-center my-5">
-          <Button text="अधिक पहा..."/>
+          <Button href="/gallery" text="अधिक पहा..."/>
         </div>
         <Herobanner />
       </div>
