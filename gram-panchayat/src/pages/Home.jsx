@@ -310,7 +310,7 @@ const Home = () => {
         </div>
         <VillageCard />
         <div className="w-full flex justify-center my-5">
-          <Button text="अधिक पहा..."/>
+          <Button text="अधिक पहा..." href="/village-programs"/>
         </div>
       </div>
 
