@@ -111,7 +111,7 @@ export default function Implink() {
                                         {item.isActive ? "Active" : "Inactive"}
                                     </button>
                                     </td>
-                                {/* <div className="col-span-1">{item.pdf ? <a href={`http://localhost:5000/${item.pdf}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">View PDF</a> : "N/A"}</div> */}
+                                {/* <div className="col-span-1">{item.pdf ? <a href={`https://palsun-backend.onrender.com/${item.pdf}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">View PDF</a> : "N/A"}</div> */}
                                 <div className="col-span-1 flex justify-center gap-2">
                                     <button onClick={() => {
                                         setText(item.title);

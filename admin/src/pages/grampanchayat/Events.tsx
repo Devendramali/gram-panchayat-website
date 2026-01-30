@@ -143,7 +143,7 @@ export default function Events() {
         <div className="col-span-3 flex items-center gap-3">
           {item.image && (
             <img
-              src={`http://localhost:5000${item.image}`}
+              src={`https://palsun-backend.onrender.com${item.image}`}
               alt="Event"
               className="w-12 h-12 rounded-lg object-cover border"
             />

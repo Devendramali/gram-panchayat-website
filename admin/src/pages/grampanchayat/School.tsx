@@ -224,7 +224,7 @@ export default function School() {
                     <div className="col-span-3 flex items-center gap-2">
                       {item.image && (
                         <img
-                          src={`http://localhost:5000${item.image}`}
+                          src={`https://palsun-backend.onrender.com${item.image}`}
                           alt=""
                           className="w-10 h-10 rounded-full object-cover"
                         />

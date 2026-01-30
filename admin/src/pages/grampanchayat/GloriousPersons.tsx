@@ -93,7 +93,7 @@ export default function GloriousPersons() {
                   <div key={item._id} className="grid grid-cols-5 border-t px-6 py-4 items-center">
                     <div className="col-span-1">{item.name}</div>
                     <div className="col-span-1">{item.description}</div>
-                    <div className="col-span-1">{item.image ? <img src={`http://localhost:5000/${item.image}`} alt={item.name} className="h-16 w-16 object-cover rounded-lg border"/> : "N/A"}</div>
+                    <div className="col-span-1">{item.image ? <img src={`https://palsun-backend.onrender.com/${item.image}`} alt={item.name} className="h-16 w-16 object-cover rounded-lg border"/> : "N/A"}</div>
                         <td className="col-span-1">
                       <button
                         onClick={() => toggleStatus(item._id)}

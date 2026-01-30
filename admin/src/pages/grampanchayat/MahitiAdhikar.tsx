@@ -134,7 +134,7 @@ export default function MahitiAdhikar() {
 
                     {/* File */}
                     <div className="col-span-4 text-blue-600">
-                      <a href={`http://localhost:5000${item.file}`} target="_blank" rel="noreferrer">
+                      <a href={`https://palsun-backend.onrender.com${item.file}`} target="_blank" rel="noreferrer">
                         📄 View PDF
                       </a>
                     </div>

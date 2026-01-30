@@ -167,7 +167,7 @@ const handleDelete = async (id) => {
                     <div className="col-span-3 flex items-center gap-2">
                       {member.image && (
                       <img
-                            src={`http://localhost:5000${member.image}`}
+                            src={`https://palsun-backend.onrender.com${member.image}`}
                             alt={member.name}
                             className="w-12 h-12 rounded-full object-cover border"
                           

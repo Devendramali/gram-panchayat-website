@@ -132,12 +132,12 @@ export default function Gallery() {
                       {item.file && (
                         item.file.endsWith(".mp4") ? (
                           <video
-                            src={`http://localhost:5000${item.file}`}
+                            src={`https://palsun-backend.onrender.com${item.file}`}
                             className="w-16 h-12 rounded object-cover"
                           />
                         ) : (
                           <img
-                            src={`http://localhost:5000${item.file}`}
+                            src={`https://palsun-backend.onrender.com${item.file}`}
                             className="w-16 h-16 rounded object-cover border"
                           />
                         )

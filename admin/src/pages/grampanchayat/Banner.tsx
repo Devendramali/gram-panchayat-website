@@ -130,7 +130,7 @@ export default function Banner() {
                   <tr key={item._id} className="border-b">
                     <td className="p-3">
                       <img
-                        src={`http://localhost:5000/uploads/banners/${item.image}`}
+                        src={`https://palsun-backend.onrender.com/uploads/banners/${item.image}`}
                         className="w-20 h-14 object-cover rounded"
                       />
                     </td>

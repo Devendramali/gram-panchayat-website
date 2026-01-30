@@ -137,7 +137,7 @@ export default function Awards() {
                     {/* Image Preview */}
                     <div className="col-span-4">
                       <img 
-                        src={`http://localhost:5000${item.file}`}
+                        src={`https://palsun-backend.onrender.com${item.file}`}
                         alt={item.title}
                         className="h-16 w-24 object-cover rounded-lg border"
                       />

@@ -122,7 +122,7 @@ export default function NoticeManager() {
             <td className="px-6 py-4 flex items-center gap-4">
               {notice.image ? (
                 <img
-                  src={`http://localhost:5000${notice.image}`}
+                  src={`https://palsun-backend.onrender.com${notice.image}`}
                   alt={notice.title}
                   className="w-12 h-12 rounded-lg object-cover border"
                 />

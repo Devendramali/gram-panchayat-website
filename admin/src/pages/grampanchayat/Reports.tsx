@@ -179,7 +179,7 @@ export default function Reports() {
                     <div className="col-span-1">
                       {item.pdf ? (
                         <a
-                          href={`http://localhost:5000/${item.pdf}`}
+                          href={`https://palsun-backend.onrender.com/${item.pdf}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-blue-500 underline"

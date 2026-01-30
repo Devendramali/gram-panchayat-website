@@ -101,7 +101,7 @@ export default function GovPrograms() {
                     <div className="col-span-1">{item.title}</div>
                     <div className="col-span-1">{item.subtitle}</div>
                     <div className="col-span-1">{item.link ? <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">Visit</a> : "N/A"}</div>
-                    <div className="col-span-1">{item.pdf ? <a href={`http://localhost:5000/${item.pdf}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">View PDF</a> : "N/A"}</div>
+                    <div className="col-span-1">{item.pdf ? <a href={`https://palsun-backend.onrender.com/${item.pdf}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">View PDF</a> : "N/A"}</div>
                     <div className="col-span-1"> <button
                         onClick={() => toggleStatus(item._id)}
                         className={`px-3 py-1 rounded text-white ${

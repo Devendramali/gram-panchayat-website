@@ -146,7 +146,7 @@ export default function AdministrativeOfficers() {
                 {officers.map((item) => (
                   <div key={item._id} className="grid grid-cols-11 border-t px-6 py-4 items-center">
                     <div className="col-span-3 flex items-center gap-2">
-                      {item.image && <img  src={`http://localhost:5000${item.image}`} alt="" className="w-10 h-10 rounded-full object-cover" />}
+                      {item.image && <img  src={`https://palsun-backend.onrender.com${item.image}`} alt="" className="w-10 h-10 rounded-full object-cover" />}
                       <span>{item.name}</span>
                     </div>
                     <div className="col-span-2">{item.post}</div>
