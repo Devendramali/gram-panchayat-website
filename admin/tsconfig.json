@@ -4,11 +4,15 @@
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
   ],
-  "compilerOptions": {
-    "strict": false,
+ "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2023"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
     "skipLibCheck": true,
+    "isolatedModules": true,
     "noEmit": true,
-    "allowJs": true,
-    "esModuleInterop": true
+    "jsx": "react-jsx"
   }
 }

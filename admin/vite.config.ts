@@ -2,17 +2,33 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import svgr from "vite-plugin-svgr";
 
-// https://vite.dev/config/
 export default defineConfig({
+  base: "/",
   plugins: [
     react(),
     svgr({
       svgrOptions: {
         icon: true,
-        // This will transform your SVG to a React component
         exportType: "named",
-        namedExport: "ReactComponent",
-      },
-    }),
+        namedExport: "ReactComponent"
+      }
+    })
   ],
+
+  build: {
+    chunkSizeWarningLimit: 1200,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ["react", "react-dom"],
+          charts: ["apexcharts", "react-apexcharts"],
+          calendar: ["@fullcalendar/react"]
+        }
+      }
+    }
+  },
+
+  server: {
+    port: 5173
+  }
 });
