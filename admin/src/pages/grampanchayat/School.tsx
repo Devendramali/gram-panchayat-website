@@ -1,22 +1,37 @@
 import { useState, useEffect } from "react";
 import API from "../../api/api";
 
+// Types
+interface Staff {
+  _id: string;
+  name: string;
+  post: string;
+  contact: string;
+  image?: string;
+  isActive?: boolean;
+}
+
+interface Count {
+  girls: number;
+  boys: number;
+  contact: string;
+}
+
 export default function School() {
-  const [staffList, setStaffList] = useState([]);
+  const [staffList, setStaffList] = useState<Staff[]>([]);
   const [showModal, setShowModal] = useState(false);
-  const [editId, setEditId] = useState(null);
+  const [editId, setEditId] = useState<string | null>(null);
   const [loadingStaff, setLoadingStaff] = useState(false);
 
-  const [count, setCount] = useState({ girls: 0, boys: 0, contact: "" });
+  const [count, setCount] = useState<Count>({ girls: 0, boys: 0, contact: "" });
   const [showModalCount, setShowModalCount] = useState(false);
   const [loadingCount, setLoadingCount] = useState(false);
-    const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
     post: "",
     contact: "",
-    image: null,
+    image: null as File | null,
   });
 
   // Fetch staff
@@ -38,15 +53,16 @@ export default function School() {
       console.error(err);
     }
   };
-      // TOGGLE ACTIVE
-      const toggleStatus = async (id) => {
-        try {
-          await API.put(`/staff/toggle/${id}`);
-          fetchStaff();
-        } catch (err) {
-          console.error(err);
-        }
-      };
+
+  // Toggle active status
+  const toggleStatus = async (id: string) => {
+    try {
+      await API.put(`/staff/toggle/${id}`);
+      fetchStaff();
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   useEffect(() => {
     fetchStaff();
@@ -54,22 +70,27 @@ export default function School() {
   }, []);
 
   // Staff input change
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, files } = e.target;
-    if (name === "image") setFormData({ ...formData, image: files[0] });
-    else setFormData({ ...formData, [name]: value });
+
+    if (name === "image" && files) {
+      setFormData({ ...formData, image: files[0] });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
   };
 
   // Count input change
-  const handleChangeCount = (e) => {
+  const handleChangeCount = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setCount({ ...count, [name]: value });
   };
 
   // Submit staff
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoadingStaff(true);
+
     try {
       const data = new FormData();
       data.append("name", formData.name);
@@ -78,13 +99,9 @@ export default function School() {
       if (formData.image) data.append("image", formData.image);
 
       if (editId) {
-        await API.put(`/staff/${editId}`, data, {
-          headers: { "Content-Type": "multipart/form-data" },
-        });
+        await API.put(`/staff/${editId}`, data);
       } else {
-        await API.post("/staff", data, {
-          headers: { "Content-Type": "multipart/form-data" },
-        });
+        await API.post("/staff", data);
       }
 
       fetchStaff();
@@ -100,15 +117,17 @@ export default function School() {
   };
 
   // Submit count
-  const handleSubmitCount = async (e) => {
+  const handleSubmitCount = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoadingCount(true);
+
     try {
       await API.put("/schoolcount", {
         girls: Number(count.girls),
         boys: Number(count.boys),
         contact: count.contact,
       });
+
       setShowModalCount(false);
     } catch (err) {
       alert("Update failed");
@@ -119,7 +138,7 @@ export default function School() {
   };
 
   // Edit staff
-  const handleEdit = (staff) => {
+  const handleEdit = (staff: Staff) => {
     setFormData({
       name: staff.name,
       post: staff.post,
@@ -131,8 +150,9 @@ export default function School() {
   };
 
   // Delete staff
-  const handleDelete = async (id) => {
+  const handleDelete = async (id: string) => {
     if (!confirm("Delete this staff?")) return;
+
     try {
       await API.delete(`/staff/${id}`);
       fetchStaff();
@@ -147,26 +167,28 @@ export default function School() {
       {/* School Counts */}
       <div className="grid grid-cols-3 gap-6 mb-6">
         <div className="col-span-3 text-right">
-            <button 
-          onClick={() => setShowModalCount(true)}
-          className="px-4 py-2 bg-brand-500 text-white rounded-lg col-span-3 mt-2 mr-6"
-        >
-          Update
-        </button>
+          <button
+            onClick={() => setShowModalCount(true)}
+            className="px-4 py-2 bg-brand-500 text-white rounded-lg col-span-3 mt-2 mr-6"
+          >
+            Update
+          </button>
         </div>
+
         <div className="bg-white p-5 rounded shadow">
           <span>Total Boys</span>
           <h4 className="text-2xl font-bold">{count.boys}</h4>
         </div>
+
         <div className="bg-white p-5 rounded shadow">
           <span>Total Girls</span>
           <h4 className="text-2xl font-bold">{count.girls}</h4>
         </div>
+
         <div className="bg-white p-5 rounded shadow">
           <span>Contact</span>
           <h4 className="text-xl font-bold">{count.contact || "-"}</h4>
         </div>
-      
       </div>
 
       {/* Staff Table */}
@@ -189,7 +211,6 @@ export default function School() {
 
             <div className="max-w-full overflow-x-auto">
               <div className="min-w-[900px]">
-                {/* Table Header */}
                 <div className="grid grid-cols-11 border-t px-6 py-3">
                   <div className="col-span-3 font-medium text-gray-500">Name</div>
                   <div className="col-span-3 font-medium text-gray-500">Post</div>
@@ -198,7 +219,6 @@ export default function School() {
                   <div className="col-span-2 font-medium text-gray-500 text-center">Action</div>
                 </div>
 
-                {/* Rows */}
                 {staffList.map((item) => (
                   <div key={item._id} className="grid grid-cols-11 border-t px-6 py-4 items-center">
                     <div className="col-span-3 flex items-center gap-2">
@@ -211,9 +231,11 @@ export default function School() {
                       )}
                       <span>{item.name}</span>
                     </div>
+
                     <div className="col-span-3">{item.post}</div>
                     <div className="col-span-2">{item.contact}</div>
-                     <td className="col-span-1">
+
+                    <div className="col-span-1 text-center">
                       <button
                         onClick={() => toggleStatus(item._id)}
                         className={`px-3 py-1 rounded text-white ${
@@ -222,8 +244,8 @@ export default function School() {
                       >
                         {item.isActive ? "Active" : "Inactive"}
                       </button>
-                    </td>
-                    
+                    </div>
+
                     <div className="col-span-2 flex justify-center gap-3">
                       <button onClick={() => handleEdit(item)} className="text-blue-500 hover:text-blue-700">
                         Edit
@@ -234,6 +256,7 @@ export default function School() {
                     </div>
                   </div>
                 ))}
+
                 {staffList.length === 0 && (
                   <p className="text-center py-6 text-gray-400">No Staff added yet</p>
                 )}
@@ -248,6 +271,7 @@ export default function School() {
         <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
           <div className="bg-white rounded-xl w-[420px] p-6 shadow-xl">
             <h3 className="text-lg font-semibold mb-4">{editId ? "Edit Staff" : "Add Staff"}</h3>
+
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 name="name"
@@ -257,6 +281,7 @@ export default function School() {
                 required
                 className="w-full border px-3 py-2 rounded-lg"
               />
+
               <input
                 name="post"
                 value={formData.post}
@@ -265,6 +290,7 @@ export default function School() {
                 required
                 className="w-full border px-3 py-2 rounded-lg"
               />
+
               <input
                 name="contact"
                 value={formData.contact}
@@ -273,11 +299,14 @@ export default function School() {
                 required
                 className="w-full border px-3 py-2 rounded-lg"
               />
+
               <input type="file" name="image" accept="image/*" onChange={handleChange} className="w-full" />
+
               <div className="flex justify-end gap-3 pt-3">
                 <button type="button" onClick={() => setShowModal(false)} className="px-4 py-2 border rounded-lg">
                   Cancel
                 </button>
+
                 <button type="submit" className="px-4 py-2 bg-brand-500 text-white rounded-lg" disabled={loadingStaff}>
                   {loadingStaff ? "Saving..." : "Save"}
                 </button>
@@ -292,6 +321,7 @@ export default function School() {
         <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
           <div className="bg-white rounded-xl w-[400px] p-6 shadow-xl">
             <h3 className="text-lg font-semibold mb-4">Update Student Count</h3>
+
             <form onSubmit={handleSubmitCount} className="space-y-4">
               <input
                 type="number"
@@ -302,6 +332,7 @@ export default function School() {
                 placeholder="Girls Count"
                 className="w-full border px-3 py-2 rounded-lg"
               />
+
               <input
                 type="number"
                 min={0}
@@ -311,6 +342,7 @@ export default function School() {
                 placeholder="Boys Count"
                 className="w-full border px-3 py-2 rounded-lg"
               />
+
               <input
                 type="text"
                 name="contact"
@@ -319,6 +351,7 @@ export default function School() {
                 placeholder="Contact Number"
                 className="w-full border px-3 py-2 rounded-lg"
               />
+
               <div className="flex justify-end gap-3 pt-3">
                 <button
                   type="button"
@@ -327,6 +360,7 @@ export default function School() {
                 >
                   Cancel
                 </button>
+
                 <button type="submit" className="px-4 py-2 bg-brand-500 text-white rounded-lg" disabled={loadingCount}>
                   {loadingCount ? "Saving..." : "Save"}
                 </button>
