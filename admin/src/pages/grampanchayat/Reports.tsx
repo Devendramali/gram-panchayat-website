@@ -1,5 +1,5 @@
 import { useState, useEffect, ChangeEvent, FormEvent } from "react";
-declare module "../../api/api";
+import API from "../../api/api";
 
 // Report Type
 type Report = {

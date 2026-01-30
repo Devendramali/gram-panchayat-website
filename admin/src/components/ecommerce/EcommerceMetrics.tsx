@@ -5,7 +5,7 @@ import {
   GroupIcon,
 } from "../../icons";
 import Badge from "../ui/badge/Badge";
-import API from "../../api/api"
+import API from "../../api/api";
 import { useEffect, useState } from "react";
 
 export default function EcommerceMetrics() {

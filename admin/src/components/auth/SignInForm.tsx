@@ -5,7 +5,7 @@ import Label from "../form/Label";
 import Input from "../form/input/InputField";
 import Checkbox from "../form/input/Checkbox";
 import Button from "../ui/button/Button";
-declare module "../../api/api";
+import API from "../../api/api";
 
 export default function SignInForm() {
   const [showPassword, setShowPassword] = useState(false);
@@ -16,6 +16,8 @@ export default function SignInForm() {
   const [error, setError] = useState("");
 
   const navigate = useNavigate();
+
+  // localStorage.clear();
 
   useEffect(() => {
   const token = localStorage.getItem("token");

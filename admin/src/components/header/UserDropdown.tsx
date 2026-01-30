@@ -1,5 +1,5 @@
   import { useEffect, useState } from "react";
-  declare module "../../api/api";
+  import API from "../../api/api";
   import { DropdownItem } from "../ui/dropdown/DropdownItem";
   import { Dropdown } from "../ui/dropdown/Dropdown";
   import { Link, useNavigate } from "react-router";
@@ -9,19 +9,26 @@
       const [profile, setProfile] = useState(null);
     const navigate = useNavigate();
 
-    useEffect(() => {
-      const fetchProfile = async () => {
-        try {
-          const res = await API.get("/users/profile");
-          setProfile(res.data);
-        } catch {
-          alert("Session expired. Login again.");
-          navigate("/signin");
-        }
-      };
+useEffect(() => {
+  const token = localStorage.getItem("token");
 
-      fetchProfile();
-    }, []);
+  // 🚫 Stop if user not logged in
+  if (!token) return;
+
+  const fetchProfile = async () => {
+    try {
+      const res = await API.get("/users/profile");
+      setProfile(res.data);
+    } catch {
+      localStorage.clear();
+      navigate("/login");
+    }
+  };
+
+  fetchProfile();
+}, []);
+
+
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -37,7 +44,7 @@
       localStorage.removeItem("token");
       localStorage.removeItem("user");
         localStorage.removeItem("name");
-      navigate("/signin")
+      navigate("/login")
     }
 
     const profilename = localStorage.getItem("name");

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-declare module "../../api/api";
+import API from "../../api/api";
 
 export default function GloriousPersons() {
   const [items, setItems] = useState<any[]>([]);

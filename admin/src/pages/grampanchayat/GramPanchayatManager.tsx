@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-declare module "../../api/api"; // Axios instance
+import API from "../../api/api"; // Axios instance
 
 export default function GramPanchayatMembers() {
   const [members, setMembers] = useState([]);

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-declare module "../../api/api";
+import API from "../../api/api";
 
 export default function Gallery() {
 
