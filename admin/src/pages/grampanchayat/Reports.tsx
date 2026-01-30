@@ -1,12 +1,32 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import API from "../../api/api";
 
+// Report Type
+type Report = {
+  _id: string;
+  title: string;
+  year: string;
+  depositAmount: number | string;
+  expenditureAmount: number | string;
+  balanceAmount: number | string;
+  pdf?: string;
+  isActive?: boolean;
+};
+
+type FormDataType = {
+  title: string;
+  year: string;
+  depositAmount: string;
+  expenditureAmount: string;
+  balanceAmount: string;
+  pdf: File | null;
+};
+
 export default function Reports() {
-  const [reports, setReports] = useState([]);
+  const [reports, setReports] = useState<Report[]>([]);
   const [showModal, setShowModal] = useState(false);
-  const [editId, setEditId] = useState(null); // for edit
-  const [formData, setFormData] = useState({
+  const [editId, setEditId] = useState<string | null>(null);
+  const [formData, setFormData] = useState<FormDataType>({
     title: "",
     year: "",
     depositAmount: "",
@@ -31,20 +51,18 @@ export default function Reports() {
   }, []);
 
   // Open modal
-  const openModal = (report = null) => {
+  const openModal = (report: Report | null = null) => {
     if (report) {
-      // Edit mode
       setEditId(report._id);
       setFormData({
         title: report.title,
         year: report.year,
-        depositAmount: report.depositAmount,
-        expenditureAmount: report.expenditureAmount,
-        balanceAmount: report.balanceAmount,
-        pdf: null, // don't prefill file input
+        depositAmount: String(report.depositAmount),
+        expenditureAmount: String(report.expenditureAmount),
+        balanceAmount: String(report.balanceAmount),
+        pdf: null,
       });
     } else {
-      // Add mode
       setEditId(null);
       setFormData({
         title: "",
@@ -59,18 +77,19 @@ export default function Reports() {
   };
 
   // Handle input change
-  const handleChange = (e) => {
-    if (e.target.name === "pdf") {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    if (e.target.name === "pdf" && e.target.files) {
       setFormData({ ...formData, pdf: e.target.files[0] });
     } else {
       setFormData({ ...formData, [e.target.name]: e.target.value });
     }
   };
 
-  // Handle form submit
-  const handleSubmit = async (e) => {
+  // Handle submit
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
+
     try {
       const data = new FormData();
       data.append("title", formData.title);
@@ -81,12 +100,10 @@ export default function Reports() {
       if (formData.pdf) data.append("pdf", formData.pdf);
 
       if (editId) {
-        // Update: call PUT endpoint
         await API.put(`/expenditure/${editId}`, data, {
           headers: { "Content-Type": "multipart/form-data" },
         });
       } else {
-        // Add new
         await API.post("/expenditure", data, {
           headers: { "Content-Type": "multipart/form-data" },
         });
@@ -102,8 +119,9 @@ export default function Reports() {
   };
 
   // Delete report
-  const handleDelete = async (id) => {
+  const handleDelete = async (id: string) => {
     if (!confirm("Are you sure you want to delete this report?")) return;
+
     try {
       await API.delete(`/expenditure/${id}`);
       fetchReports();
@@ -112,21 +130,21 @@ export default function Reports() {
     }
   };
 
-        const toggleStatus = async (id) => {
-          try {
-            await API.put(`/expenditure/toggle/${id}`);
-                   fetchReports();
-          } catch (err) {
-            console.error(err);
-          }
-        };
+  // Toggle status
+  const toggleStatus = async (id: string) => {
+    try {
+      await API.put(`/expenditure/toggle/${id}`);
+      fetchReports();
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   return (
     <>
       <div className="grid grid-cols-12 gap-6">
         <div className="col-span-12">
           <div className="rounded-2xl border bg-white">
-            {/* Header */}
             <div className="flex justify-between px-6 py-4">
               <h3 className="text-lg font-semibold">Expenditure Reports</h3>
               <button
@@ -137,10 +155,8 @@ export default function Reports() {
               </button>
             </div>
 
-            {/* Table */}
             <div className="max-w-full overflow-x-auto">
               <div className="min-w-[900px]">
-                {/* Header Row */}
                 <div className="grid grid-cols-9 border-t px-6 py-3">
                   <div className="col-span-2 font-medium text-gray-500">Title</div>
                   <div className="col-span-1 font-medium text-gray-500">Year</div>
@@ -152,7 +168,6 @@ export default function Reports() {
                   <div className="col-span-1 text-center font-medium text-gray-500">Action</div>
                 </div>
 
-                {/* Rows */}
                 {reports.map((item) => (
                   <div key={item._id} className="grid grid-cols-9 border-t px-6 py-4 items-center">
                     <div className="col-span-2">{item.title}</div>
@@ -160,10 +175,11 @@ export default function Reports() {
                     <div className="col-span-1">{item.depositAmount}</div>
                     <div className="col-span-1">{item.expenditureAmount}</div>
                     <div className="col-span-1">{item.balanceAmount}</div>
+
                     <div className="col-span-1">
                       {item.pdf ? (
                         <a
-                         href={`http://localhost:5000/${item.pdf}`}
+                          href={`http://localhost:5000/${item.pdf}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-blue-500 underline"
@@ -174,6 +190,7 @@ export default function Reports() {
                         "N/A"
                       )}
                     </div>
+
                     <div className="col-span-1">
                       <button
                         onClick={() => toggleStatus(item._id)}
@@ -184,6 +201,7 @@ export default function Reports() {
                         {item.isActive ? "Active" : "Inactive"}
                       </button>
                     </div>
+
                     <div className="col-span-1 flex justify-center gap-4">
                       <button
                         onClick={() => openModal(item)}
@@ -191,6 +209,7 @@ export default function Reports() {
                       >
                         Edit
                       </button>
+
                       <button
                         onClick={() => handleDelete(item._id)}
                         className="text-red-500 hover:text-red-700"
@@ -217,6 +236,7 @@ export default function Reports() {
             <h3 className="text-lg font-semibold mb-4">
               {editId ? "Edit Report" : "Add Expenditure Report"}
             </h3>
+
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 name="title"
@@ -226,6 +246,7 @@ export default function Reports() {
                 required
                 className="w-full border px-3 py-2 rounded-lg"
               />
+
               <input
                 name="year"
                 value={formData.year}
@@ -234,6 +255,7 @@ export default function Reports() {
                 required
                 className="w-full border px-3 py-2 rounded-lg"
               />
+
               <input
                 name="depositAmount"
                 type="number"
@@ -243,6 +265,7 @@ export default function Reports() {
                 required
                 className="w-full border px-3 py-2 rounded-lg"
               />
+
               <input
                 name="expenditureAmount"
                 type="number"
@@ -252,6 +275,7 @@ export default function Reports() {
                 required
                 className="w-full border px-3 py-2 rounded-lg"
               />
+
               <input
                 name="balanceAmount"
                 type="number"
@@ -261,6 +285,7 @@ export default function Reports() {
                 required
                 className="w-full border px-3 py-2 rounded-lg"
               />
+
               <input
                 type="file"
                 name="pdf"
@@ -277,6 +302,7 @@ export default function Reports() {
                 >
                   Cancel
                 </button>
+
                 <button
                   type="submit"
                   className="px-4 py-2 bg-brand-500 text-white rounded-lg"
