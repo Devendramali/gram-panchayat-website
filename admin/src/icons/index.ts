@@ -66,7 +66,7 @@ import { ReactComponent as Filecheck } from "./filecheck.svg?react";
 import { ReactComponent as Bookopen } from "./bookopen.svg?react";
 import { ReactComponent as Messagessquare } from "./messagessquare.svg?react";
 import { ReactComponent as Calendar } from "./calendar.svg?react";
-import { ReactComponent as School } from "./school.svg";
+import { ReactComponent as School } from "./school.svg?react";
 import { ReactComponent as Link1 } from "./link.svg?react";
 
 export {
