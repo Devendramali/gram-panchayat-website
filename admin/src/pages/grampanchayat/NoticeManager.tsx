@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import API from "../../api/api";
+declare module "../../api/api";
 
 export default function NoticeManager() {
   const [notices, setNotices] = useState([]);

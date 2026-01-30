@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import API from "../../api/api";
+declare module "../../api/api";
 
 interface ItemType {
   _id: string;

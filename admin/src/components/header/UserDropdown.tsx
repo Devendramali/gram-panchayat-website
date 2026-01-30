@@ -1,5 +1,5 @@
   import { useEffect, useState } from "react";
-  import API from "../../api/api";
+  declare module "../../api/api";
   import { DropdownItem } from "../ui/dropdown/DropdownItem";
   import { Dropdown } from "../ui/dropdown/Dropdown";
   import { Link, useNavigate } from "react-router";
